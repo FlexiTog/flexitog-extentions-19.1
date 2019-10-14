@@ -23,8 +23,8 @@ define(
 			
 			if(layout)
 			{
-				layout.addChildView('Header', function() { 
-					return new HeaderView({ container: container });
+				layout.registerView('Header', function() { 
+					return new HeaderView({ application: container });
 				});
 			}
 
