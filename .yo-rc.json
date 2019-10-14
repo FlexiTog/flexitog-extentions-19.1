@@ -1,0 +1,14 @@
+{
+  "generator-extension": {
+    "promptValues": {
+      "vendor": "code25"
+    },
+    "ext_application": {
+      "FlexitogGlobal": [
+        "shopping",
+        "myaccount",
+        "checkout"
+      ]
+    }
+  }
+}
