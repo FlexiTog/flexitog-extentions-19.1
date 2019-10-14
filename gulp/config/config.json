@@ -30,7 +30,8 @@
             "Workspace/FlexitogGlobal"
         ],
         "theme_path": "Workspace/Extras/Suite_Commerce_Base_Theme",
-        "overrides_path": "Workspace/Extras/Suite_Commerce_Base_Theme/Overrides"
+        "overrides_path": "Workspace/Extras/Suite_Commerce_Base_Theme/Overrides",
+        "extensions_dest": "4845698"
     },
     "application": {},
     "services": {

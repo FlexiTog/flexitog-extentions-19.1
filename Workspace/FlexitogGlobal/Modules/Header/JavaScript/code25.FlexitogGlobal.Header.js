@@ -20,10 +20,13 @@ define(
 			
 			/** @type {LayoutComponent} */
 			var layout = container.getComponent('Layout');
+			console.log("mountToApp Flexitog Global");
 			
 			if(layout)
 			{
+				console.log("registerView Flexitog Global");
 				layout.registerView('Header', function() { 
+					console.log("Header Flexitog Global");
 					return new HeaderView({ application: container });
 				});
 			}

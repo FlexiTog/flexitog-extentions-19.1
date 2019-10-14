@@ -1,12 +1,11 @@
 {
     "name": "FlexitogGlobal",
-    "fantasyName": "Flexitog Glocal",
+    "fantasyName": "Flexitog Global",
     "vendor": "code25",
-    "version": "1.0.0",
     "type": "extension",
-    "target": "SCS,SCA",
+    "target": "SCA,SCS",
+    "version": "1.0.0",
     "description": "Global extension, e.g. header and footer.",
-    "skins": [],
     "assets": {
         "img": {
             "files": []
@@ -17,16 +16,6 @@
     },
     "configuration": {
         "files": []
-    },
-    "sass": {
-        "entry_points": {
-            "shopping": "Modules/Header/Sass/_flexitogglobal-header.scss",
-            "myaccount": "Modules/Header/Sass/_flexitogglobal-header.scss",
-            "checkout": "Modules/Header/Sass/_flexitogglobal-header.scss"
-        },
-        "files": [
-            "Modules/Header/Sass/_flexitogglobal-header.scss"
-        ]
     },
     "templates": {
         "application": {
@@ -46,6 +35,16 @@
                 ]
             }
         }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Header/Sass/_flexitogglobal-header.scss",
+            "myaccount": "Modules/Header/Sass/_flexitogglobal-header.scss",
+            "checkout": "Modules/Header/Sass/_flexitogglobal-header.scss"
+        },
+        "files": [
+            "Modules/Header/Sass/_flexitogglobal-header.scss"
+        ]
     },
     "javascript": {
         "entry_points": {
@@ -73,6 +72,5 @@
                 ]
             }
         }
-    },
-    "local_folder": "Workspace/FlexitogGlobal"
+    }
 }
