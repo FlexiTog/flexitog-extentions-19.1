@@ -1,0 +1,15 @@
+{
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2019.1.1",
+        "email": "gordon@code25.com",
+        "account": "1294017",
+        "role": 1068,
+        "hostname": "1294017.restlets.api.netsuite.com",
+        "website": "2",
+        "domain": "testing.flexitog.com",
+        "webapp_id": "4709826",
+        "target_folder": "4709826",
+        "is_scis": false,
+        "roleId": 1068
+    }
+}

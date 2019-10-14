@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# BB1 ignores
+.DS_Store
+DeployDistribution
+LocalDistribution
+dist
+Deepak
