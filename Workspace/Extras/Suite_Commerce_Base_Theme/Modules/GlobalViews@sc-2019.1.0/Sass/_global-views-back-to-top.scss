@@ -4,6 +4,9 @@
     display: block;
     text-align:center;
     padding-bottom: $sc-padding-lv3;
+    a{
+        columns: $sc-neutral-shade-300;
+    }
 
     @media (min-width: $screen-sm-min) {
         display: none;

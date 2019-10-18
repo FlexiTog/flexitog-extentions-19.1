@@ -28,25 +28,20 @@
 #main {
 	@include transition-transform(400ms ease);
 }
-
+@media (max-width: $screen-sm-max) {
 .header-sidebar-opened {
 
-	@include translate($sc-sidebar-size, 0);
-	height: 100%;
-	width: 100%;
-	position: fixed;
-
-	@media (min-width: $screen-md-min) {
-		@include translate(0, 0);
-		height: auto;
-		position: static;
-	}
+	div.ft-header-secondary-wrapper{
+		display:block;
+		font-size:0;
+			}
 
 	.header-sidebar-overlay {
 		width: 100%;
 		height: 100%;
-		opacity: 0.3;
+		opacity: 0.1;
 	}
+}
 }
 
 
@@ -191,6 +186,10 @@
 	li {
 		color: $sc-mobile-navigation-link-color;
 	}
+	a.header-subheader-settings-link{
+		height: $sc-target-size;
+	line-height: $sc-target-size;
+	}
 }
 
 .header-sidebar-menu-wrapper li:last-child > a {
@@ -219,18 +218,28 @@
 
 .header-sidebar-wrapper .header-profile-menu-login,
 .header-sidebar-user-logout {
-	height: $sc-main-nav-height;
-	line-height: $sc-main-nav-height;
-	padding: 0 $sc-padding-lv3;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
 	display: block;
-	@media (min-width:$screen-md-min) {
-		line-height: $sc-target-size;
+	font-size:$sc-font-size-m;
+	margin:$sc-margin-lv2;
+	display:inline-block;
+	background-color:$sc-color-theme-background;
+	border:1px solid $sc-color-theme-border-light;
+	padding:0 $sc-padding-lv3;
+	color:$sc-color-copy;
+	border-radius: 2px;
+
+	&:hover, &:focus {
+		color: $sc-color-copy-dark;
+		border:1px solid $sc-color-theme-border;
 	}
 }
 
 .header-sidebar-user-logout-icon{
 	@extend .fa;
 	@extend %fa-sign-out;
+	color:inherit!important;
 }
 
 .header-sidebar-wrapper .header-profile-welcome-link{

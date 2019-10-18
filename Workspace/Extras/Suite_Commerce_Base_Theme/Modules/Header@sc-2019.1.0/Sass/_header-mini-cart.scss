@@ -31,6 +31,9 @@
 		border-left: 6px solid transparent;
 		content: '';
 	}
+	a{
+		color:$sc-color-copy;
+	}
 
 }
 
@@ -116,6 +119,7 @@ a.header-mini-cart-buttons {
 
 .header-mini-cart-menu-cart-link{
 	@extend .header-menu-cart-link;
+	border-radius:2px;
 }
 
 .header-mini-cart-menu-cart-link-enabled{

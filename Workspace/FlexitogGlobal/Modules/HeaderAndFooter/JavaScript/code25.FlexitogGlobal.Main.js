@@ -1,11 +1,11 @@
 
 define(
-	'code25.FlexitogGlobal.Header'
+	'code25.FlexitogGlobal.Main'
 ,   [
-		'code25.FlexitogGlobal.Header.View'
+		'code25.FlexitogGlobal.Header.View','Header.Profile.View','Footer.View','code25_flexitogglobal_header_profile.tpl','code25_flexitogglobal_footer.tpl'
 	]
 ,   function (
-		HeaderView
+		HeaderView,HeaderProfileView,FooterView,code25_flexitogglobal_header_profile_tpl,code25_flexitogglobal_footer_tpl
 	)
 {
 	'use strict';
@@ -20,13 +20,13 @@ define(
 			
 			/** @type {LayoutComponent} */
 			var layout = container.getComponent('Layout');
-			console.log("mountToApp Flexitog Global");
+
+			HeaderProfileView.prototype.template=code25_flexitogglobal_header_profile_tpl;
+			FooterView.prototype.template=code25_flexitogglobal_footer_tpl;
 			
 			if(layout)
-			{
-				console.log("registerView Flexitog Global");
-				layout.registerView('Header', function() { 
-					console.log("Header Flexitog Global");
+			{	
+				layout.registerView('Header', function() { 		
 					return new HeaderView({ application: container });
 				});
 			}

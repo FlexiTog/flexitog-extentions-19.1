@@ -14,11 +14,10 @@ define(
 ,	[
 		'SC.Configuration'
 	,	'Profile.Model'
-	,	'Header.Logo.View'
 	,	'Header.MiniCart.View'
 	,	'Header.MiniCartSummary.View'
 	,	'Header.Profile.View'
-	,	'Header.Menu.View'
+	,	'code25.FlexitogGlobal.Menu'
 	,	'GlobalViews.HostSelector.View'
 	,	'GlobalViews.CurrencySelector.View'
 
@@ -30,11 +29,12 @@ define(
 	,	'Backbone.CompositeView'
 	,	'underscore'
 	,	'Utils'
+	,'SiteSearch.View'
+	,'code25_flexitogglobal_sitesearch.tpl'
 	]
 ,	function(
 		Configuration
 	,	ProfileModel
-	,	HeaderLogoView
 	,	HeaderMiniCartView
 	,	HeaderMiniCartSummaryView
 	,	HeaderProfileView
@@ -51,6 +51,8 @@ define(
 	,	BackboneCompositeView
 	,	_
 	,	Utils
+	,SiteSearchView
+	,code25_flexitogglobal_sitesearch_tpl
 	)
 {
 	'use strict';
@@ -65,6 +67,7 @@ define(
 		,	'click [data-action="header-sidebar-show"]' : 'showSidebar'
 		,	'click [data-action="header-sidebar-hide"]': 'hideSidebar'
 		,	'click [data-type="header-sidebar-menu"]': 'hideSidebar'
+		,	'click .header-menu-level1-anchor': 'hideSidebar'
 		}
 
 	,	initialize: function ()
@@ -135,6 +138,13 @@ define(
 		}
 
 	,	childViews: {
+		'Header.SiteSearch': function ()
+			{
+				var search= new SiteSearchView({application:this.options.application,header:true});
+				search.template=code25_flexitogglobal_sitesearch_tpl;
+				return search;
+			}
+		,
 			'Header.MiniCart': function()
 			{
 				return new HeaderMiniCartView();
@@ -156,10 +166,6 @@ define(
 				} else {
 					return null;
 				}
-			}
-		,	'Header.Logo': function()
-			{
-				return new HeaderLogoView(this.options);
 			}
 		,	'Header.Menu': function()
 			{

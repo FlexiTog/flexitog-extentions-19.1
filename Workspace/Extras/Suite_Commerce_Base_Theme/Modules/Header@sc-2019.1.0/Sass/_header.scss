@@ -1,8 +1,13 @@
-$sc-main-nav-height: 55px;
+$sc-main-nav-height: 104px;
+$sc-main-nav-mobile-height: 54px;
 $sc-main-nav-width: 130px;
-$sc-main-nav-link-height: 44px;
+$sc-main-nav-link-height: $sc-target-size;
 $sc-secondary-menu-height: 55px;
 $sc-sidebar-size: 246px;
+
+.header-shipping-bar{
+	height:auto!important;
+}
 
 .header-message {
 	padding: 0;
@@ -32,7 +37,7 @@ $sc-sidebar-size: 246px;
 
 .header-main-nav {
 	@extend .container;
-	min-height: $sc-main-nav-height;
+	height: $sc-main-nav-mobile-height;
 
 	a , button {
 		i {
@@ -47,75 +52,54 @@ $sc-sidebar-size: 246px;
 	}
 
 	a.header-mini-cart-menu-cart-link {
+		background-color:$flexitog-darkred;
+		color: $sc-header-cart-link-text-color;
+
 		i {
-			color: $sc-mobile-header-cart-icon-color;
+			color: $sc-header-cart-link-text-color;
+		}
+
+		&:hover, &:focus {
+			background-color:$flexitog-white;
+			color: $sc-header-cart-link-text-color-hover;
+
+			i.header-mini-cart-menu-cart-icon {
+				color: $sc-header-cart-link-text-color-hover;
+			}
 		}
 
 		&:active {
-			i {
-				color: $sc-mobile-header-cart-icon-active-color;
+			background-color:$flexitog-white;
+			color: $sc-header-cart-link-text-color-active;
+
+			i.header-mini-cart-menu-cart-icon {
+				color: $sc-header-cart-link-text-color-hover;
 			}
 		}
 	}
 
 	border-bottom: $sc-mobile-header-border-width solid $sc-mobile-header-border-color;
-
+	@media (min-width: $screen-sm-min) {
+		height: $sc-main-nav-height;
+	}
 	@media (min-width: $screen-md-min) {
 		box-shadow: none;
 		border: none;
-
-		a {
-			color: $sc-header-link-text-color;
-			text-transform: $sc-header-link-text-transform;
-
-			i {
-				color: $sc-header-link-text-color;
-			}
-
-			&:hover, &:focus {
-				color: $sc-header-link-hover-text-color;
-
-				i {
-					color: $sc-header-link-hover-text-color;
-				}
-			}
-
-			&:active {
-				color: $sc-header-link-active-text-color;
-
-				i {
-					color: $sc-header-link-active-text-color;
-				}
-			}
-		}
 
 		.header-profile-menu-login {
 			color: $sc-header-link-text-color;
 		}
 
-		a.header-mini-cart-menu-cart-link {
-			color: $sc-header-cart-link-text-color;
+		
+	}
+}
 
-			i {
-				color: $sc-header-cart-link-text-color;
-			}
+.open>.a.header-mini-cart-menu-cart-link[data-toggle="dropdown"] {
+	color: $sc-color-copy-dark;
+	background-color: $flexitog-white;
 
-			&:hover, &:focus {
-				color: $sc-header-cart-link-text-color-hover;
-
-				i.header-mini-cart-menu-cart-icon {
-					color: $sc-header-cart-link-text-color-hover;
-				}
-			}
-
-			&:active {
-				color: $sc-header-cart-link-text-color-active;
-
-				i.header-mini-cart-menu-cart-icon {
-					color: $sc-header-cart-link-text-color-hover;
-				}
-			}
-		}
+	i {
+		color: inherit;
 	}
 }
 
@@ -132,28 +116,41 @@ $sc-sidebar-size: 246px;
 ///////////////////////////////////////////////////////////////
 //header sidebar toggle
 .header-sidebar-toggle-wrapper {
+	margin-top: (($sc-main-nav-mobile-height) - ($sc-main-nav-link-height)) / 2;
+	margin-bottom: (($sc-main-nav-mobile-height) - ($sc-main-nav-link-height)) / 2;
+
+	@media (min-width: $screen-sm-min) {
 	margin-top: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
 	margin-bottom: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
+	}
 	margin-right: $sc-margin-lv3;
 	float: left;
 
 	@media(min-width: $screen-md-min) {
 		display: none;
 	}
+	button,a{float:left;}
 }
 
 .header-sidebar-toggle {
-	background: none;
+	background: $flexitog-darkred;
+	color:$flexitog-white;
 	width: $sc-target-size;
 	height: $sc-target-size;
 	text-align: center;
 	margin-left: -$sc-margin-lv2;
+	border-radius:2px;
+	outline:none;
+	&:hover{
+		background-color: $flexitog-white;
+		color:$sc-color-copy-dark;
+	}
 }
 
 .header-main-nav button i.header-sidebar-toggle-icon {
 	@extend .fa;
 	@extend %fa-bars;
-	color: $sc-mobile-navigation-hamburger-icon-color;
+	color: inherit;
 	font-size: 24px;
 	margin-top:2px;
 }
@@ -164,8 +161,14 @@ $sc-sidebar-size: 246px;
 .header-right-menu {
 	display:flex;
 	float: right;
-	margin-top: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
-	margin-bottom: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
+	margin-top: (($sc-main-nav-mobile-height) - ($sc-main-nav-link-height)) / 2;
+	margin-bottom: (($sc-main-nav-mobile-height) - ($sc-main-nav-link-height)) / 2;
+
+	@media (min-width: $screen-sm-min) {
+		margin-top: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
+		margin-bottom: (($sc-main-nav-height) - ($sc-main-nav-link-height)) / 2;
+	
+	}
 }
 
 .header-menu-profile,
@@ -195,10 +198,7 @@ $sc-sidebar-size: 246px;
 .header-menu-cart {
 	float: left;
 	position: relative;
-
-	@media (min-width: $screen-md-min) {
-		margin-left: $sc-margin-lv4;
-	}
+	margin-left: $sc-margin-lv2;
 }
 
 .header-menu-searchmobile {
@@ -220,9 +220,11 @@ $sc-sidebar-size: 246px;
 }
 
 %header-link:hover, %header-link:focus {
-	color: $sc-color-copy;
+background-color:$flexitog-white;
+	color: $sc-color-copy-dark;
 }
 %header-link:active {
+	background-color:$flexitog-white;
 	color: $sc-color-copy-dark;
 }
 
@@ -311,33 +313,10 @@ $sc-sidebar-size: 246px;
 	z-index: 1001;
 	background: $sc-neutral-shade-0;
 	padding: $sc-padding-lv6;
-	left: -130px;
+	left: -150px;
 	box-shadow: 0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175);
 	border: 1px solid $sc-color-theme-border-light;
 	width: 335px;
-
-	&:before {
-		position: absolute;
-		top: -7px;
-		right: 165px;
-		display: inline-block;
-		border-right: 7px solid transparent;
-		border-bottom: 7px solid $sc-color-theme-border-light;
-		border-left: 7px solid transparent;
-		border-bottom-color: transparentize($sc-neutral-shade-500, 1-0.2);
-		content: '';
-	}
-
-	&:after {
-		position: absolute;
-		top: -6px;
-		right: 166px;
-		display: inline-block;
-		border-right: 6px solid transparent;
-		border-bottom: 6px solid $sc-neutral-shade-0;
-		border-left: 6px solid transparent;
-		content: '';
-	}
 }
 
 .open .header-menu-settings-dropdown {
@@ -347,19 +326,20 @@ $sc-sidebar-size: 246px;
 .header-subheader {
 	background: $sc-top-menu-background-color;
 	display: none;
-	text-align: right;
+	
 	font-size: $sc-font-size-m;
 	color: $sc-color-secondary;
 	border-bottom: 1px solid $sc-top-menu-border-color;
 
 	@media(min-width: $screen-sm-min) {
+		background:$flexitog-darkred;
+		border-bottom: 1px solid transparent;
 		display: block;
 	}
 }
 
 .header-subheader-container {
 	@extend .container;
-	padding-right:$sc-padding-lv6;
 }
 
 .header-subheader-options {
@@ -369,7 +349,7 @@ $sc-sidebar-size: 246px;
 
 	li a {
 		display: block;
-		background-color: $sc-top-menu-link-background-color;
+		
 		padding-top: $sc-padding-lv2;
 		padding-bottom: $sc-padding-lv2;
 		padding-left: $sc-padding-lv3 / 2;
@@ -380,27 +360,10 @@ $sc-sidebar-size: 246px;
 		letter-spacing: $sc-top-menu-link-letter-spacing;
 		line-height: $sc-top-menu-link-line-height;
 
-		border-style: solid;
-		border-color: $sc-top-menu-link-border-color;
-
-		border-top-width: $sc-top-menu-link-border-top-width;
-		padding-top: ($sc-padding-lv2) - ($sc-top-menu-link-border-top-width);
-
-		border-bottom-width: $sc-top-menu-link-border-bottom-width;
-		padding-bottom: ($sc-padding-lv2) - ($sc-top-menu-link-border-bottom-width);
-
+		
 		&:hover {
 			background-color: $sc-top-menu-link-hover-background-color;
 			color: $sc-top-menu-link-hover-text-color;
-
-			border-style: solid;
-			border-color: $sc-top-menu-link-hover-border-color;
-
-			border-top-width: $sc-top-menu-link-hover-border-top-width;
-			padding-top: ($sc-padding-lv2) - ($sc-top-menu-link-hover-border-top-width);
-
-			border-bottom-width: $sc-top-menu-link-hover-border-bottom-width;
-			padding-bottom: ($sc-padding-lv2) - ($sc-top-menu-link-hover-border-bottom-width);
 
 			i {
 				color: $sc-top-menu-link-hover-text-color;
@@ -410,15 +373,6 @@ $sc-sidebar-size: 246px;
 		&:active {
 			background-color: $sc-top-menu-link-active-background-color;
 			color: $sc-top-menu-link-active-text-color;
-
-			border-style: solid;
-			border-color: $sc-top-menu-link-active-border-color;
-
-			border-top-width: $sc-top-menu-link-active-border-top-width;
-			padding-top: ($sc-padding-lv2) - ($sc-top-menu-link-active-border-top-width);
-
-			border-bottom-width: $sc-top-menu-link-active-border-bottom-width;
-			padding-bottom: ($sc-padding-lv2) - ($sc-top-menu-link-active-border-bottom-width);
 
 			i {
 				color: $sc-top-menu-link-active-text-color;
@@ -434,6 +388,7 @@ $sc-sidebar-size: 246px;
 .header-subheader-settings-link {
 	display:inline;
 	color:$sc-color-secondary;
+	font-size:$sc-font-size-m;
 }
 
 .header-subheader-settings {
