@@ -30,7 +30,7 @@
 
 .cart-left{
 	@extend .col-sm-7;
-	@extend .col-lg-9;
+	@extend .col-md-9;	
 }
 
 .cart-left {
@@ -47,7 +47,7 @@
 
 .cart-right{
 	@extend .col-sm-5;
-	@extend .col-lg-3;
+	@extend .col-md-3;
 }
 
 .cart-empty{

@@ -12,7 +12,8 @@
             "files": [
                 "img/Logo.svg",
                 "img/ThumbnailNotFound.svg",
-                "img/FooterLogo.svg"
+                "img/FooterLogo.svg",
+                "img/favicon.ico"
             ]
         },
         "fonts": {
@@ -40,7 +41,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header_profile.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
                 ]
             },
             "myaccount": {
@@ -49,7 +51,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header_profile.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
                 ]
             },
             "checkout": {
@@ -58,7 +61,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header_profile.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
                 ]
             }
         }

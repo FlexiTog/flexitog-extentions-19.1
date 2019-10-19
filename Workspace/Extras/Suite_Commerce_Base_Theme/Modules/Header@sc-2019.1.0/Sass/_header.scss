@@ -241,6 +241,21 @@ background-color:$flexitog-white;
 	overflow: hidden;
 	color: $sc-color-primary;
 }
+.open .header-menu-cart-link{
+	border-bottom:10px solid $flexitog-white!important;
+	background-color: $flexitog-white!important;
+	color:$sc-color-copy-dark!important;
+	i{
+		color:$sc-color-copy-dark!important;
+	}
+	border-radius:0;
+	-webkit-border-top-left-radius: 2px;
+-webkit-border-top-right-radius: 2px;
+-moz-border-radius-topleft: 2px;
+-moz-border-radius-topright: 2px;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+}
 
 .header-menu-cart-link-enabled{
 	.header-menu-cart-icon{

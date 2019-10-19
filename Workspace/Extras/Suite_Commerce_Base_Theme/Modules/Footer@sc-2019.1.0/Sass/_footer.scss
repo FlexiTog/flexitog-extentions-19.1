@@ -71,4 +71,13 @@ footer {
 .footer-content-col2 {
     @extend .col-sm-3;
     @extend .col-xs-6;
+    border-right:1px solid $sc-color-theme-700;
+    &:last-child{
+        border-right:none;
+    }
+    @media (max-width: $screen-xs-max) {
+        &:nth-child(even) {
+            border-right:none;
+        }
+    }
 }

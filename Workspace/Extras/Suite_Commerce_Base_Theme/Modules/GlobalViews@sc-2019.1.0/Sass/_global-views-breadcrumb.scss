@@ -18,3 +18,6 @@
 .global-views-breadcrumb-divider-icon {
 	@extend .breadcrumb-divider-icon;
 }
+.banner-breadcrumb-top,.banner-breadcrumb-bottom{
+	display:none;
+}

@@ -386,7 +386,10 @@ $ft-logo-height:150px;
 }
 
 .ft-footer-link-break {
-	color: #888;
+	color: $sc-color-theme;
+	display:inline-block;
+	margin-left:$sc-margin-lv2;
+	margin-right:$sc-margin-lv2;
 }
 
 .ft-footer-links {
@@ -424,9 +427,11 @@ $ft-logo-height:150px;
 	h6 {
 		font-size: $sc-font-size-xs;
 	}
-
+p{
+	font-size: $sc-font-size-xxs;
+		color: $sc-neutral-shade-300;
+}
 	a {
-		font-size: $sc-font-size-xxs;
 		color: $sc-neutral-shade-500;
 		display: block;
 	}

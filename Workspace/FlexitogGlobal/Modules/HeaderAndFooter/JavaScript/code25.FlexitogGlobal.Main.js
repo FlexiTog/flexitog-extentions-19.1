@@ -2,10 +2,10 @@
 define(
 	'code25.FlexitogGlobal.Main'
 ,   [
-		'code25.FlexitogGlobal.Header.View','Header.Profile.View','Footer.View','code25_flexitogglobal_header_profile.tpl','code25_flexitogglobal_footer.tpl'
+		'code25.FlexitogGlobal.Header.View','Header.Profile.View','Footer.View','Header.MiniCart.View','code25_flexitogglobal_header_profile.tpl','code25_flexitogglobal_footer.tpl','code25_flexitogglobal_mini_cart.tpl'
 	]
 ,   function (
-		HeaderView,HeaderProfileView,FooterView,code25_flexitogglobal_header_profile_tpl,code25_flexitogglobal_footer_tpl
+		HeaderView,HeaderProfileView,FooterView,HeaderMiniCartView,code25_flexitogglobal_header_profile_tpl,code25_flexitogglobal_footer_tpl,code25_flexitogglobal_mini_cart_tpl
 	)
 {
 	'use strict';
@@ -23,6 +23,7 @@ define(
 
 			HeaderProfileView.prototype.template=code25_flexitogglobal_header_profile_tpl;
 			FooterView.prototype.template=code25_flexitogglobal_footer_tpl;
+			HeaderMiniCartView.prototype.template=code25_flexitogglobal_mini_cart_tpl;
 			
 			if(layout)
 			{	
