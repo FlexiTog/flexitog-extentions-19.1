@@ -5,7 +5,10 @@
     text-align:center;
     padding-bottom: $sc-padding-lv3;
     a{
-        columns: $sc-neutral-shade-300;
+        color: $sc-neutral-shade-300;
+        i{
+            color:inherit;
+        }
     }
 
     @media (min-width: $screen-sm-min) {

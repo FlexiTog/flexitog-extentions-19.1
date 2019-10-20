@@ -1,3 +1,5 @@
+<div class="ft-xs-header"></div>
+
 <div class="header-message" data-view="Message.Placeholder"></div>
 
 <div class="header-main-wrapper">

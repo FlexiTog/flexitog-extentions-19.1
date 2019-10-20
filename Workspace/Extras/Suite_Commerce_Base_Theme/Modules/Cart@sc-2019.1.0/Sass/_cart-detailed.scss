@@ -1,6 +1,8 @@
 .cart-detailed{
 	@extend .cart;
 
+	margin-top:$sc-margin-lv4;
+
 	.transaction-line-views-selected-option-color-label-text,
 	.transaction-line-views-tax-label,
 	.cart-item-summary-item-list-actionable-amount-label,

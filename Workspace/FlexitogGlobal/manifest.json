@@ -2,18 +2,27 @@
     "name": "FlexitogGlobal",
     "fantasyName": "Flexitog Global",
     "vendor": "code25",
-    "version": "1.0.0",
     "type": "extension",
+    "cct": [
+        {
+            "icon": "img/code25_bannercct_icon.svg",
+            "settings_record": "customrecord_c25_banner",
+            "registercct_id": "c25_banner",
+            "label": "Banner CCT",
+            "description": "Banner for SMT."
+        }
+    ],
     "target": "SCA,SCS",
+    "version": "1.0.0",
     "description": "Global extension, e.g. header and footer.",
-    "skins": [],
     "assets": {
         "img": {
             "files": [
                 "img/Logo.svg",
                 "img/ThumbnailNotFound.svg",
                 "img/FooterLogo.svg",
-                "img/favicon.ico"
+                "img/favicon.ico",
+                "img/code25_bannercct_icon.svg"
             ]
         },
         "fonts": {
@@ -22,16 +31,6 @@
     },
     "configuration": {
         "files": []
-    },
-    "sass": {
-        "entry_points": {
-            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
-        },
-        "files": [
-            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
-        ]
     },
     "templates": {
         "application": {
@@ -42,7 +41,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl",
+                    "Modules/BannerCCT/Templates/code25_bannercct.tpl"
                 ]
             },
             "myaccount": {
@@ -52,7 +52,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl",
+                    "Modules/BannerCCT/Templates/code25_bannercct.tpl"
                 ]
             },
             "checkout": {
@@ -62,10 +63,21 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_header.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_menu.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_sitesearch.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_mini_cart.tpl",
+                    "Modules/BannerCCT/Templates/code25_bannercct.tpl"
                 ]
             }
         }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
+        },
+        "files": [
+            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
+        ]
     },
     "javascript": {
         "entry_points": {
@@ -78,24 +90,26 @@
                 "files": [
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Main.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Header.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js",
+                    "Modules/BannerCCT/JavaScript/code25.BannerCCT.View.js"
                 ]
             },
             "myaccount": {
                 "files": [
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Main.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Header.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js",
+                    "Modules/BannerCCT/JavaScript/code25.BannerCCT.View.js"
                 ]
             },
             "checkout": {
                 "files": [
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Main.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Header.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Menu.js",
+                    "Modules/BannerCCT/JavaScript/code25.BannerCCT.View.js"
                 ]
             }
         }
-    },
-    "local_folder": "Workspace/FlexitogGlobal"
+    }
 }

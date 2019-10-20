@@ -5,6 +5,7 @@ Date : 10/18/2019, 10:51:37 AM
 ----}}
 <div data-view="Global.BackToTop"></div>
 <div class="ft-footer-links">
+	<div class="ft-footer-links-inner">
 
 <div id="banner-footer1" class="footer-content-col2">
 		<div data-cms-area="global_banner_footer1" data-cms-area-filters="global">
@@ -33,7 +34,7 @@ Date : 10/18/2019, 10:51:37 AM
 	
 		</div>
 	</div>
-
+</div>
 </div>
 <div class="footer-content">
 

@@ -1,6 +1,6 @@
 .cms-landing-page,.product-details-information-tab-content-container,.facets-browse-category-heading-main-description {	
   @extend .container;
-  padding:$sc-padding-lv1 $sc-padding-lv3 $sc-padding-lv8 $sc-padding-lv3;
+  padding:0 $sc-padding-lv3 $sc-padding-lv8 $sc-padding-lv3;
 
   h1{
 	  margin-bottom:1rem;
@@ -133,19 +133,29 @@ ol>li {
   tr:nth-child(even) {background-color: $sc-color-theme-100;}
 
   @media (min-width: $screen-sm-min) {
-	padding:$sc-padding-lv2 $sc-padding-lv8*1.5 $sc-padding-lv8 $sc-padding-lv8*1.5;
+	padding:0 $sc-padding-lv8*1.5 $sc-padding-lv8 $sc-padding-lv8*1.5;
 
 	h1{
 		font-size:$sc-font-size-xxxl*1.5;
 	}
   }
   @media (min-width: $screen-md-min) {
-	padding:$sc-padding-lv2 $sc-padding-lv8*2.5 $sc-padding-lv8 $sc-padding-lv8*2.5;
+	padding:0 $sc-padding-lv8*2.5 $sc-padding-lv8 $sc-padding-lv8*2.5;
 
 	h1{
 		font-size:$sc-font-size-xxxl*2;
 	}
   }
+}
+
+.cms-content-CMS_HTML{
+	padding-top:$sc-padding-lv6;
+	@media (min-width: $screen-sm-min) {
+		padding-top:$sc-padding-lv8;
+	}
+	@media (min-width: $screen-md-min) {
+		padding-top:$sc-padding-lv3;
+	}
 }
 .product-details-information-tab-content-container,.facets-browse-category-heading-main-description{
 	padding:0;
