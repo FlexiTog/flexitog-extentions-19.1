@@ -12,7 +12,7 @@
 
 	{{#if showMyAccountMenu}}
 		<ul class="header-profile-menu-myaccount-container">
-			<li data-view="Header.Menu.MyAccount"></li>
+			<li data-view="code25.FlexitogGlobal.Menu.MyAccount"></li>
 		</ul>
 	{{/if}}
 

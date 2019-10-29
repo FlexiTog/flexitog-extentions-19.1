@@ -57,6 +57,7 @@ Date : 10/15/2019, 3:19:47 PM
 			</a>
 		</div>
 	{{/if}} 
+	<div data-view="Countdown"></div>
 </div>
 
 

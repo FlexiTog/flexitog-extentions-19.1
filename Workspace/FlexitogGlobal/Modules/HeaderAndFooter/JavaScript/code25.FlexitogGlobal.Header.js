@@ -16,7 +16,7 @@ define(
 	,	'Profile.Model'
 	,	'Header.MiniCart.View'
 	,	'Header.MiniCartSummary.View'
-	,	'Header.Profile.View'
+	,	'code25.FlexitogGlobal.Profile'
 	,	'code25.FlexitogGlobal.Menu'
 	,	'GlobalViews.HostSelector.View'
 	,	'GlobalViews.CurrencySelector.View'

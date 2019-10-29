@@ -329,8 +329,8 @@ border-top-right-radius: 2px;
 	background: $sc-neutral-shade-0;
 	padding: $sc-padding-lv6;
 	left: -150px;
-	box-shadow: 0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175);
-	border: 1px solid $sc-color-theme-border-light;
+	box-shadow: 0 6px 6px transparentize($sc-neutral-shade-500, 1-0.175);
+	
 	width: 335px;
 }
 

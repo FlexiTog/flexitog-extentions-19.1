@@ -8,7 +8,10 @@
 	margin-left: $sc-margin-lv2;
 	margin-right: 0px;
 	font-size: $sc-font-size-xl;
-	padding: 10px 10px;
+	line-height:$sc-target-size;
+	padding: 0px 2px;
+	vertical-align:middle;
+	box-sizing: content-box;
 	position: relative;
 	outline: none;
 	height: $sc-target-size;

@@ -64,12 +64,14 @@
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:+44 01692 400 30" class="header-subheader-settings-link">+44 01692 400 30 <i class="header-phone-icon"></i></a>
+					<a href="tel:00440169240030" class="header-subheader-settings-link">+44 01692 400 30 <i
+							class="header-phone-icon"></i></a>
 				</li>
 
 			</ul>
 
 			<ul class="ft-header-subheader-options">
+				
 				{{#if showLanguagesOrCurrencies}}
 				<li class="header-subheader-settings">
 					<a href="#" class="header-subheader-settings-link" data-toggle="dropdown"
@@ -88,9 +90,8 @@
 					</div>
 				</li>
 				{{/if}}
-				<li data-view="StoreLocatorHeaderLink"></li>
-				<li data-view="RequestQuoteWizardHeaderLink"></li>
-				<li data-view="QuickOrderHeaderLink"></li>
+				
+				
 				<li class="header-menu-profile" data-view="Header.Profile"></li>
 			</ul>
 		</div>
@@ -102,14 +103,14 @@
 			<button class="header-sidebar-toggle" data-action="header-sidebar-show">
 				<i class="header-sidebar-toggle-icon"></i>
 			</button>
-			<a class="ft-header-phone-button-link" href="tel:tel:+44 01692 400 30" >
+			<a class="ft-header-phone-button-link" href="tel:00440169240030">
 				<i class="header-phone-icon"></i>
 			</a>
 		</div>
 
 		<div class="header-content">
 
-			<div class="ft-header-secondary-wrapper" data-view="Header.Menu" >
+			<div class="ft-header-secondary-wrapper" data-view="Header.Menu">
 			</div>
 
 			<a href="/" data-touchpoint="home"><img class="ft-header-logo"
@@ -117,12 +118,55 @@
 
 
 			<div class="header-right-menu">
-				
-<div data-view="Header.SiteSearch"></div>
+
+				<div data-view="Header.SiteSearch"></div>
 
 
 				<div class="ft-header-menu-searchmobile" data-view="SiteSearch.Button"></div>
-				<a class="ft-header-quick-link" title="{{translate 'Quick Order'}}"><i class="ft-header-quick-link-icon"></i></a>
+				<span class="dropdown">
+					<a href="#" class="ft-header-quick-link" title="{{translate 'Quick Order'}}"
+						data-toggle="dropdown"><i class="ft-header-quick-link-icon"></i></a>
+					<div id="quick-menu" class="ft-header-menu-quick-dropdown">
+						<h2 class="header-menu-settings-dropdown-title"><i class="ft-header-quick-link-icon"></i>
+							{{translate 'Quicker Ordering'}}</h2>
+						<p>{{translate '3 simple functions to speed up creating and processing your orders'}}</p>
+						<a href="#" data-touchpoint="{{cartTouchPoint}}" data-hashtag="#cart?openQuickOrder=true" class="ft-quick-order-button">
+							<div class="ft-quick-order-button-main">
+								<h3>{{translate 'Quick Order'}} <i class="ft-header-quick-link-icon"></i></h3>
+								<p>{{translate 'Know your product codes? Use the quick add bar in the cart to add items to your order.'}}
+								</p>
+							</div>
+							<div class="ft-quick-order-button-arrows">»</div>
+						</a>
+
+						<a data-touchpoint="customercenter" data-hashtag="#reorderItems" class="ft-quick-order-button">
+							<div class="ft-quick-order-button-main">
+								<h3>{{translate 'Re-order Items'}} <i class="ft-header-refresh-icon"></i></h3>
+								<p>{{translate 'Need to re-order previously items? Access a list of previously purchased items organised by popularity / frequency. '}}
+								</p>
+							</div>
+							<div class="ft-quick-order-button-arrows">»</div>
+						</a>
+
+						<a data-touchpoint="customercenter" data-hashtag="#wishlist" class="ft-quick-order-button">
+							<div class="ft-quick-order-button-main">
+								<h3>{{translate 'Your Saved Products'}} <i class="ft-header-list-icon"></i></h3>
+								<p>{{translate 'Create a list of items that you order on a regular basis an quickly add the entire list or part of a list to your cart.'}}
+								</p>
+							</div>
+							<div class="ft-quick-order-button-arrows">»</div>
+						</a>
+
+						<a data-touchpoint="customercenter" data-hashtag="#quotes" class="ft-quick-order-button">
+							<div class="ft-quick-order-button-main">
+								<h3>{{translate 'Request a Quote'}} <i class="ft-header-edit-icon"></i></h3>
+								
+							</div>
+							<div class="ft-quick-order-button-arrows">»</div>
+						</a>
+
+					</div>
+				</span>
 				<div class="header-menu-cart">
 					<div class="header-menu-cart-dropdown">
 						<div data-view="Header.MiniCart"></div>

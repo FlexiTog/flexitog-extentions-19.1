@@ -20,14 +20,7 @@
 }
 
 .header-profile-welcome-link-name{
-	display: block;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-
-	@media (min-width: $screen-md-min){
-		display: inline;
-	}
+	display: inline;
 }
 
 .header-profile-welcome-user-icon{

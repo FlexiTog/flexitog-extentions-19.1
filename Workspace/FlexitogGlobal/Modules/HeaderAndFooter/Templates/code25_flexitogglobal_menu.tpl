@@ -21,12 +21,12 @@ Date : 10/15/2019, 3:19:47 PM
 						{{#each categories}}
 						<li>
 							<a class="{{class}} ft-menu-list" {{objectToAtrributes this}}>
-								<img class="ft-menu-thumbnail" src="{{thumbnailurl}}"
+								<img class="ft-menu-thumbnail" src="{{resizeImage additionalFields.thumbnailurl 'thumbnail'}}"
 									onerror="this.src='/webapp/extensions/code25/FlexitogGlobal/1.0.0/img/ThumbnailNotFound.svg';this.onerror=null;"
 									alt="{{translate text}}" />
 								<div>
 									<p class="ft-menu-title">{{translate text}} <i class="ft-chevron-right"></i></p>
-									<p>{{translate pageheading}} Browse our selection</p>
+									<p class="ft-menu-subtext">{{translate additionalFields.pageheading}}</p>
 								</div>
 							</a>
 

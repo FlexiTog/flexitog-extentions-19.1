@@ -3,7 +3,7 @@
 
 	{{#if showResults}}
 		<div class="facets-facet-browse-content">
-
+<!--
 			<div class="facets-facet-browse-facets" data-action="pushable" data-id="product-search-facets">
 
 				<div data-cms-area="facet_navigation_top" data-cms-area-filters="page_type"></div>
@@ -16,7 +16,7 @@
 
 				<div data-cms-area="facet_navigation_bottom" data-cms-area-filters="page_type"></div>
 			</div>
-
+-->
 			<!--
 			Sample of how to add a particular facet into the HTML. It is important to specify the data-facet-id="<facet id>"
 			properly <div data-view="Facets.FacetedNavigation.Item" data-facet-id="custitem1"></div>
@@ -28,10 +28,12 @@
 					<div class="facets-facet-browse-category">
 						<div data-view="Facets.Browse.CategoryHeading"></div>
 
-						<div data-view="Facets.CategoryCells"></div>
+						
 					</div>
 				{{/if}}
-
+				<div class="ft-categories">
+				<div data-view="Facets.CategoryCells" class="facets-category-cells"></div>
+</div>
 				<header class="facets-facet-browse-header">
 
 					{{#if showItems}}
@@ -56,7 +58,7 @@
 
 						<div class="facets-facet-browse-list-header-expander">
 							<button class="facets-facet-browse-list-header-expander-button collapsed" data-toggle="collapse" data-target="#list-header-filters" aria-expanded="true" aria-controls="list-header-filters">
-								{{translate 'Sort & Filter'}}
+								{{translate 'Sort'}}
 								<i class="facets-facet-browse-list-header-expander-icon"></i>
 							</button>
 						</div>
@@ -73,12 +75,12 @@
 									</div>
 
 									{{#if hasItemsAndFacets}}
-										<div class="facets-facet-browse-list-header-filter-column">
+										<!--<div class="facets-facet-browse-list-header-filter-column">
 											<button class="facets-facet-browse-list-header-filter-facets" data-type="sc-pusher" data-target="product-search-facets">
 												{{translate 'Narrow By'}}
 												<i class="facets-facet-browse-list-header-filter-facets-icon"></i>
 											</button>
-										</div>
+										</div>-->
 									{{/if}}
 								</div>
 
