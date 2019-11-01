@@ -2,7 +2,7 @@
 	<div class="facets-browse-category-heading-main-description">
 		<h1>{{pageheading}}</h1>
 		{{#if showDescription}}	
-			<p>{{{description}}}</p>
+			<div>{{{description}}}</div>
 		{{/if}}
 	</div>
 	{{#if hasBanner}}

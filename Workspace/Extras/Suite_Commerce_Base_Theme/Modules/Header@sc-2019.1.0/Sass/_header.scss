@@ -328,7 +328,7 @@ border-top-right-radius: 2px;
 	z-index: 1001;
 	background: $sc-neutral-shade-0;
 	padding: $sc-padding-lv6;
-	left: -150px;
+	right: 0px;
 	box-shadow: 0 6px 6px transparentize($sc-neutral-shade-500, 1-0.175);
 	
 	width: 335px;
@@ -404,6 +404,9 @@ border-top-right-radius: 2px;
 	display:inline;
 	color:$sc-color-secondary;
 	font-size:$sc-font-size-m;
+	&:focus{
+		background-color: $flexitog-white;
+	}
 }
 
 .header-subheader-settings {

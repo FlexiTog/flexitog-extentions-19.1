@@ -42,6 +42,9 @@ define('code25.BannerCCT.View', [
 			if(this.settings.custrecord_c25_banner_leftcontent_isempty&&this.settings.custrecord_c25_banner_rightcontent_isempty){
 				this.settings.topbottomonly=true;	
 			}
+			if(this.settings["custrecord_c25_banner_bgvideo_mp4"]&&this.settings["custrecord_c25_banner_bgvideo_mp4"].length>0&&this.settings["custrecord_c25_banner_bgvideo_webm"]&&this.settings["custrecord_c25_banner_bgvideo_webm"].length>0){
+				this.settings["custrecord_c25_benner_hasvideo"]=true;
+			}
 			this.settings.drop=this.settings.custrecord_c25_banner_dropcontent=="T";
 			//console.log(this.settings);
 			

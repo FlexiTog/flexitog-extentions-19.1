@@ -11,8 +11,8 @@
 }
 p{
 	margin-bottom:1.5rem;
-	margin-left:.75rem;
-	margin-right:.75rem;
+	padding-left:.75rem;
+	padding-right:.75rem;
 }
 table{
 	margin-top:.5rem;
@@ -150,12 +150,6 @@ ol>li {
 
 .cms-content-CMS_TEXT:first-of-type,.cms-content-CMS_HTML:first-of-type{
 	padding-top:$sc-padding-lv6;
-	@media (min-width: $screen-sm-min) {
-		padding-top:$sc-padding-lv8;
-	}
-	@media (min-width: $screen-md-min) {
-		padding-top:$sc-padding-lv3;
-	}
 }
 .product-details-information-tab-content-container,.facets-browse-category-heading-main-description{
 	padding:0;

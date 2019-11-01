@@ -12,7 +12,7 @@ Date : 10/15/2019, 3:19:47 PM
 		{{#if text}}
 		<li {{#if categories}}data-toggle="categories-menu" {{/if}}>
 			<a class="{{class}}" {{objectToAtrributes this}}>
-				{{translate text}}<i class="ft-chevron-right ft-mini-icon"></i>
+				{{translate text}}<i class="ft-chevron-down ft-mini-icon"></i>
 			</a>
 			{{#if categories}}
 			<ul class="header-menu-level-container">
@@ -31,6 +31,19 @@ Date : 10/15/2019, 3:19:47 PM
 							</a>
 
 
+						</li>
+						{{/each}}
+					</ul>
+				</li>
+			</ul>
+			<ul class="header-menu-level-mobile-container">
+				<li>
+					<ul class="header-menu-level2">
+						{{#each categories}}
+						<li>
+							<a class="{{class}}" {{objectToAtrributes this}}>
+								{{translate text}}
+							</a>
 						</li>
 						{{/each}}
 					</ul>

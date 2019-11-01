@@ -119,7 +119,10 @@ define(
 			}
 			
 			var isSCISIntegrationEnabled = Configuration.get('siteSettings.isSCISIntegrationEnabled', false);
-
+var displayName=profile.get('firstname') || profile.get('lastname');
+if(profile.get('firstname') && profile.get('lastname')){
+	displayName+=" "+profile.get('lastname');
+}
 			// @class Header.Profile.View.Context
 			return {
 				showExtendedMenu: !is_loading && is_logged_in
@@ -139,7 +142,8 @@ define(
 
 				// @property {Boolean} returnsPermissions
 			,	returnsPermissions: isSCISIntegrationEnabled ? 'transactions.tranFind.1,transactions.tranPurchasesReturns.1' : 'transactions.tranFind.1,transactions.tranRtnAuth.1'
-			,	displayName: profile.get('firstname') || profile.get('companyname')
+			,companyName:profile.get('companyname')
+			,	displayName: displayName
 			};
 		}
 	});

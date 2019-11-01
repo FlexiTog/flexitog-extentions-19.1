@@ -17,23 +17,33 @@ Date : 10/23/2019, 4:12:27 PM
 		</a>
 	</li>
 	<li class="header-menu-myaccount-overview">
-		<a class="header-menu-myaccount-overview-anchor" href="#" data-touchpoint="customercenter" data-hashtag="#overview" name="accountoverview">
-						{{#if showExtendedMenu}}
-<i class="header-profile-welcome-user-icon"></i>
-		{{translate 'Welcome <strong class="header-profile-welcome-link-name">$(0)</strong>' displayName}}
-		<i class="header-profile-welcome-carret-icon"></i>
-			{{else}}
-			{{translate 'Account Overview'}}
+		<a class="header-menu-myaccount-overview-anchor-2" href="#" data-touchpoint="customercenter"
+		data-hashtag="#overview" name="accountoverview">
+		{{translate 'Account Overview'}} <i class="ft-chevron-right"></i>
+</a>
+		{{#if showExtendedMenu}}
+		<span class="header-menu-myaccount-overview-divider">|</span>
+		<a class="header-menu-myaccount-overview-anchor" href="#" data-touchpoint="customercenter"
+			data-hashtag="#overview" name="accountoverview">
+			
+			<i class="header-profile-welcome-user-icon"></i>
+			{{#if companyName}}
+			{{companyName}}&nbsp;:&nbsp; 
 			{{/if}}
+			{{displayName}}
+			
+			
 		</a>
-
+		{{/if}}
+		
 		<a class="header-menu-myaccount-signout-link" href="#" data-touchpoint="logout" name="signout">
 			<i class="header-menu-myaccount-signout-icon"></i>
 			{{translate 'Sign Out'}}
 		</a>
 	</li>
 
-	<li class="header-menu-myaccount-item-level2 header-menu-myaccount-level2-orders" data-permissions="{{purchasesPermissions}}" data-permissions-operator="OR">
+	<li class="header-menu-myaccount-item-level2 header-menu-myaccount-level2-orders"
+		data-permissions="{{purchasesPermissions}}" data-permissions-operator="OR">
 		<a class="header-menu-myaccount-anchor-level2" href="#" data-action="push-menu" name="orders">
 			{{translate 'Purchases'}}
 			<i class="header-menu-myaccount-menu-push-icon"></i>
@@ -46,22 +56,27 @@ Date : 10/23/2019, 4:12:27 PM
 				</a>
 			</li>
 			<li data-permissions="{{purchasesPermissions}}">
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#purchases" name="orderhistory">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#purchases" name="orderhistory">
 					{{translate 'Purchases History'}}
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#returns" data-permissions="{{returnsPermissions}}" name="returns">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#returns" data-permissions="{{returnsPermissions}}" name="returns">
 					{{translate 'Returns'}}
 				</a>
 			</li>
 			<li data-permissions="{{purchasesPermissions}}">
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#reorderItems" name="reorderitems">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#reorderItems" name="reorderitems">
 					{{translate 'Reorder Items'}}
 				</a>
 			</li>
-			<li class="header-menu-myaccount-item-level3" data-permissions="transactions.tranFind.1,transactions.tranEstimate.1">
-				<a class="header-menu-myaccount-anchor-level3" data-action="push-menu" href="#" data-touchpoint="customercenter" data-hashtag="#quotes" name="quotes">
+			<li class="header-menu-myaccount-item-level3"
+				data-permissions="transactions.tranFind.1,transactions.tranEstimate.1">
+				<a class="header-menu-myaccount-anchor-level3" data-action="push-menu" href="#"
+					data-touchpoint="customercenter" data-hashtag="#quotes" name="quotes">
 					{{translate 'Quotes'}}
 					<i class="header-menu-myaccount-menu-push-icon"></i>
 				</a>
@@ -71,27 +86,30 @@ Date : 10/23/2019, 4:12:27 PM
 							<i class="header-menu-myaccount-pop-icon "></i>
 							{{translate 'Back'}}
 						</a>
-			</li>
+					</li>
 					<li>
-						<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter" data-hashtag="#quotes" name="allmyquotes">
+						<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter"
+							data-hashtag="#quotes" name="allmyquotes">
 							{{translate 'All my Quotes'}}
 						</a>
 					</li>
 					{{#if hasProductList}}
-						<li>
-							{{#if hasNoItem}}
-								<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter" data-hashtag="#quotes/new" name="requestaquotes">
-									{{translate 'Request a Quote'}}
-								</a>
-							{{else}}
+					<li>
+						{{#if hasNoItem}}
+						<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter"
+							data-hashtag="#quotes/new" name="requestaquotes">
+							{{translate 'Request a Quote'}}
+						</a>
+						{{else}}
 
-								{{#if hasItemInBasket}}
-									<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter" data-hashtag="#quotebasket" name="quotebasket">
-										{{translate 'Quote basket <span>(300)</span>'}}
-				</a>
-								{{/if}}
-							{{/if}}
-						</li>
+						{{#if hasItemInBasket}}
+						<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter"
+							data-hashtag="#quotebasket" name="quotebasket">
+							{{translate 'Quote basket <span>(300)</span>'}}
+						</a>
+						{{/if}}
+						{{/if}}
+					</li>
 					{{/if}}
 				</ul>
 			</li>
@@ -100,36 +118,39 @@ Date : 10/23/2019, 4:12:27 PM
 
 	<!-- Product Lists - For single list mode data-hashtag will be added dynamically -->
 	{{#if isProductListsEnabled}}
-		<li class="header-menu-myaccount-item-level2">
-			<a class="header-menu-myaccount-anchor-level2" href="#" data-touchpoint="customercenter" data-hashtag="#wishlist" name="wishlist">
-				{{translate 'Wishlist'}}
-			</a>
+	<li class="header-menu-myaccount-item-level2">
+		<a class="header-menu-myaccount-anchor-level2" href="#" data-touchpoint="customercenter"
+			data-hashtag="#wishlist" name="wishlist">
+			{{translate 'Wishlist'}}
+		</a>
 
-			<ul class="header-menu-myaccount-level3">
-				{{#if productListsReady}}
-					{{#unless isSingleList}}
-						<li>
-							<a href="#" class="header-menu-myaccount-anchor-level3" data-touchpoint="customercenter" data-hashtag="#wishlist" name="allmylists">
-								{{translate 'All my lists'}}
-							</a>
-						</li>
-					{{/unless}}
-					{{#each productLists}}
-					<li>
-						<a href="#" class="header-menu-myaccount-anchor-level3" data-touchpoint="customercenter" data-hashtag="{{url}}" name="{{name}}">
-							{{name}} ({{ items.length }})
-						</a>
-					</li>
-					{{/each}}
-				{{else}}
-					<li>
-						<a href="#" class="header-menu-myaccount-anchor-level3">
-							{{translate 'Loading...'}}
-						</a>
-					</li>
-				{{/if}}
-			</ul>
-		</li>
+		<ul class="header-menu-myaccount-level3">
+			{{#if productListsReady}}
+			{{#unless isSingleList}}
+			<li>
+				<a href="#" class="header-menu-myaccount-anchor-level3" data-touchpoint="customercenter"
+					data-hashtag="#wishlist" name="allmylists">
+					{{translate 'All my lists'}}
+				</a>
+			</li>
+			{{/unless}}
+			{{#each productLists}}
+			<li>
+				<a href="#" class="header-menu-myaccount-anchor-level3" data-touchpoint="customercenter"
+					data-hashtag="{{url}}" name="{{name}}">
+					{{name}} ({{ items.length }})
+				</a>
+			</li>
+			{{/each}}
+			{{else}}
+			<li>
+				<a href="#" class="header-menu-myaccount-anchor-level3">
+					{{translate 'Loading...'}}
+				</a>
+			</li>
+			{{/if}}
+		</ul>
+	</li>
 	{{/if}}
 
 
@@ -147,16 +168,24 @@ Date : 10/23/2019, 4:12:27 PM
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#balance" name="accountbalance">{{translate 'Account Balance'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#balance" name="accountbalance">{{translate 'Account Balance'}}</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#invoices" data-permissions="transactions.tranCustInvc.1" name="invoices">{{translate 'Invoices'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#invoices" data-permissions="transactions.tranCustInvc.1"
+					name="invoices">{{translate 'Invoices'}}</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#transactionhistory" data-permissions="transactions.tranCustInvc.1, transactions.tranCustCred.1, transactions.tranCustPymt.1, transactions.tranCustDep.1, transactions.tranDepAppl.1" data-permissions-operator="OR" name="transactionhistory">{{translate 'Transaction History'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#transactionhistory"
+					data-permissions="transactions.tranCustInvc.1, transactions.tranCustCred.1, transactions.tranCustPymt.1, transactions.tranCustDep.1, transactions.tranDepAppl.1"
+					data-permissions-operator="OR" name="transactionhistory">{{translate 'Transaction History'}}</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#printstatement" data-permissions="transactions.tranStatement.2" name="printastatement">{{translate 'Print a Statement'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#printstatement" data-permissions="transactions.tranStatement.2"
+					name="printastatement">{{translate 'Print a Statement'}}</a>
 			</li>
 		</ul>
 	</li>
@@ -175,27 +204,32 @@ Date : 10/23/2019, 4:12:27 PM
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#profileinformation" name="profileinformation">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#profileinformation" name="profileinformation">
 					{{translate 'Profile Information'}}
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#emailpreferences" name="emailpreferences">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#emailpreferences" name="emailpreferences">
 					{{translate 'Email Preferences'}}
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#addressbook" name="addressbook">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#addressbook" name="addressbook">
 					{{translate 'Address Book'}}
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#creditcards" name="creditcards">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#creditcards" name="creditcards">
 					{{translate 'Payment Methods'}}
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter" data-hashtag="#updateyourpassword" name="updateyourpassword">
+				<a class="header-menu-myaccount-anchor-level3" href="#" data-touchpoint="customercenter"
+					data-hashtag="#updateyourpassword" name="updateyourpassword">
 					{{translate 'Update Your Password'}}
 				</a>
 			</li>
@@ -204,7 +238,7 @@ Date : 10/23/2019, 4:12:27 PM
 
 	{{#if isCaseModuleEnabled}}
 	<li class="header-menu-myaccount-item-level2" data-permissions="lists.listCase.2">
-		<a  class="header-menu-myaccount-anchor-level2" tabindex="-1" href="#" data-action="push-menu" name="cases">
+		<a class="header-menu-myaccount-anchor-level2" tabindex="-1" href="#" data-action="push-menu" name="cases">
 			{{translate 'Cases'}}
 			<i class="header-menu-myaccount-menu-push-icon"></i>
 		</a>
@@ -216,10 +250,12 @@ Date : 10/23/2019, 4:12:27 PM
 				</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#cases" name="allmycases">{{translate 'Support Cases'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#cases" name="allmycases">{{translate 'Support Cases'}}</a>
 			</li>
 			<li>
-				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter" data-hashtag="#newcase" name="submitnewcase">{{translate 'Submit New Case'}}</a>
+				<a class="header-menu-myaccount-anchor-level3" tabindex="-1" href="#" data-touchpoint="customercenter"
+					data-hashtag="#newcase" name="submitnewcase">{{translate 'Submit New Case'}}</a>
 			</li>
 		</ul>
 	</li>

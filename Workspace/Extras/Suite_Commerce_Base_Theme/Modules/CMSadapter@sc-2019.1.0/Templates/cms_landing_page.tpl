@@ -1,3 +1,4 @@
+<style>.shopping-layout-breadcrumb{display:none;}</style>
 <div class="cms-landing-page-row">
 	<div class="cms-landing-page-row-full-col">
 		<div data-cms-area="cms-landing-page-placeholder-page-type-1" data-cms-area-filters="page_type"></div>
@@ -28,4 +29,5 @@
 		<div data-cms-area="cms-landing-page-placeholder-fifth-row-quarter" data-cms-area-filters="path"></div>
 	</div>
 	----}}
+	<script>Backbone.trigger("landing-page-rendered");</script>
 </div>

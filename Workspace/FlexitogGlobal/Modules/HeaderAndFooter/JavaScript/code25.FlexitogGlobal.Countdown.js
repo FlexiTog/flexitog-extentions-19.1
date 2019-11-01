@@ -55,10 +55,10 @@ define(
                 day = 0; //TEMP!
                 if (day >= 0 && day <= 3) { //Monday to Thursday
                     showCountdown = true;
-                    message = "For Next Day Delivery";
+                    message = "For Next Day Delivery (UK Only)";
                 } else if (day == 4) { //Friday
                     showCountdown = true;
-                    message = "For Monday Delivery (next working day)";
+                    message = "For Monday Delivery (Next Working Day, UK Only)";
                 }
                 if(cutoff.getTime()<date.getTime()){
                     showCountdown = false;

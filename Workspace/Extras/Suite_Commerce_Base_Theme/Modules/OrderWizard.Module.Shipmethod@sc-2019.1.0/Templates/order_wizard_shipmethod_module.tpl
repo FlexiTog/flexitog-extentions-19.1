@@ -50,6 +50,19 @@
 				</div>
 			{{/if}}
 		{{/if}}
+	
+	
+	<h3>
+			{{translate 'Delivery Note / Instructons'}}
+		</h3>
+		<div class="address-edit-fields-group" data-input="custbody_deliverynote" data-validation="control-group">
+		<label class="address-edit-fields-group-label" for="custbody_deliverynote">
+			{{translate 'Enter your delivery instructions below'}} <span class="address-edit-fields-input-optional">(optional)</span>
+		</label>
+		<div class="address-edit-fields-group-form-controls" data-validation="control">
+			<textarea class="address-edit-fields-group-input" id="custbody_deliverynote" name="custbody_deliverynote">{{model.options.custbody_deliverynote}}</textarea>	
+		</div>
+	</div>
 	{{/if}}
 </div>
 

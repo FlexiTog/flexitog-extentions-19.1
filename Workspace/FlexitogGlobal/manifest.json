@@ -2,10 +2,7 @@
     "name": "FlexitogGlobal",
     "fantasyName": "Flexitog Global",
     "vendor": "code25",
-    "version": "1.0.0",
     "type": "extension",
-    "target": "SCA,SCS",
-    "description": "Global extension, e.g. header and footer.",
     "cct": [
         {
             "icon": "img/code25_bannercct_icon.svg",
@@ -29,7 +26,9 @@
             "description": "Grid for SMT."
         }
     ],
-    "skins": [],
+    "target": "SCA,SCS",
+    "version": "1.0.0",
+    "description": "Global extension, e.g. header and footer.",
     "assets": {
         "img": {
             "files": [
@@ -39,7 +38,8 @@
                 "img/favicon.ico",
                 "img/code25_bannercct_icon.svg",
                 "img/code25_accordioncct_icon.svg",
-                "img/code25_gridcct_icon.svg"
+                "img/code25_gridcct_icon.svg",
+                "img/FooterLogo2015.svg"
             ]
         },
         "fonts": {
@@ -49,16 +49,6 @@
     "configuration": {
         "files": [
             "Modules/HeaderAndFooter/Configuration/Countdown.json"
-        ]
-    },
-    "sass": {
-        "entry_points": {
-            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
-        },
-        "files": [
-            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
         ]
     },
     "templates": {
@@ -116,6 +106,16 @@
             }
         }
     },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
+        },
+        "files": [
+            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
+        ]
+    },
     "javascript": {
         "entry_points": {
             "shopping": "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Main.js",
@@ -166,6 +166,5 @@
                 ]
             }
         }
-    },
-    "local_folder": "Workspace/FlexitogGlobal"
+    }
 }

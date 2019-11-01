@@ -15,17 +15,17 @@
 			color: darken($sc-color-secondary,20);
 		
 	}
-	&:active{
-		background-color:$sc-color-secondary;
-		color: $flexitog-white;
-	}
 
 }
+.facets-category-cell:active{
+	background-color:$sc-color-secondary;
+		color: $flexitog-white;
+}
 .facets-category-cells{
-	
+	margin-top:$sc-margin-lv6;
 	display:block;
 text-align:center;
-	
+margin-bottom:$sc-margin-lv2;
 }
 
 

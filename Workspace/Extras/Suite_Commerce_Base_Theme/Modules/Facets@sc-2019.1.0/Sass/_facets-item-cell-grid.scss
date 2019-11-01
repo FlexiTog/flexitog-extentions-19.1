@@ -33,12 +33,13 @@
 
 
 .facets-item-cell-grid-details {
-	text-align:left;
-	.product-line-stock {
-		text-align:left;
-	}
+	text-align:center;
+	
 	.cart-add-to-cart-button-container {
 		padding: 0 0 $sc-padding-lv3 0;
+	}
+	.facets-item-cell-grid-rating{
+		margin-bottom:-$sc-margin-lv1;
 	}
 }
 
@@ -54,7 +55,6 @@
 
 .facets-item-cell-grid-price {
 	@extend .small-price;
-	margin-bottom:$sc-margin-lv2;
 }
 
 .facets-item-cell-grid-rating {
@@ -64,7 +64,7 @@
 
 .facets-item-cell-grid {
 	.global-views-star-rating-area {
-		margin-bottom:$sc-margin-lv2;
+		margin-bottom:$sc-margin-lv1;
 	}
 }
 

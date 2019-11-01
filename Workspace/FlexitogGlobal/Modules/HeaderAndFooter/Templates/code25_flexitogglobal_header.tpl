@@ -22,7 +22,7 @@
 						<ul class="ft-bullet-list">
 							<li><i class="header-menu-chat-icon"></i></li>
 							<li>
-								<h5>{{translate 'Live Chat'}}</h5>
+								<h5 onclick="jivo_api.open();" style="cursor:pointer;">{{translate 'Live Chat'}}</h5>
 								<p>{{translate 'Quick instant advice from an experienced advisor'}}</p>
 							</li>
 						</ul>
@@ -64,7 +64,7 @@
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00440169240030" class="header-subheader-settings-link">+44 01692 400 30 <i
+					<a href="tel:00441692400300" class="header-subheader-settings-link">+44 01692 400 300 <i
 							class="header-phone-icon"></i></a>
 				</li>
 
@@ -76,7 +76,7 @@
 				<li class="header-subheader-settings">
 					<a href="#" class="header-subheader-settings-link" data-toggle="dropdown"
 						title="{{translate 'Settings'}}">
-						{{translate 'Language/currency'}}
+						{{translate 'Language/Currency'}}
 						<i class="header-menu-settings-icon"></i>
 					</a>
 					<div class="header-menu-settings-dropdown">
@@ -103,7 +103,7 @@
 			<button class="header-sidebar-toggle" data-action="header-sidebar-show">
 				<i class="header-sidebar-toggle-icon"></i>
 			</button>
-			<a class="ft-header-phone-button-link" href="tel:00440169240030">
+			<a class="ft-header-phone-button-link" href="tel:00441692400300">
 				<i class="header-phone-icon"></i>
 			</a>
 		</div>

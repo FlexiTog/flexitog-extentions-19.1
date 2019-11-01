@@ -1,9 +1,9 @@
 define(
 	'code25.FlexitogGlobal.Main', [
-		'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView'
+		'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'Content.LandingPages.View'
 	],
 	function (
-		HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView
+		HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, ContentLandingPagesView
 	) {
 		'use strict';
 
@@ -75,6 +75,40 @@ define(
 				//Header Scroll
 				var lastScroll = 0,
 					headerScroll = 0;
+
+
+				function animate(element,reset) {
+					var $this = jQuery(element);
+if(reset){
+	$this.removeClass("ft-animate-play")
+}
+					if (!$this.hasClass("ft-animate-play")) {
+
+						var $parent = jQuery(parent);
+
+						var win = $(window);
+
+						
+
+						$this.find("h1,h2,h3,h4,h5,h6,p").each(function () {
+							var $el = $(this);
+							var top = $el.offset().top;
+							if (top < win.scrollTop() + win.height() -50) {
+									$this.addClass("ft-animate-play");
+							}
+						});
+
+					}
+				}
+
+				function jAnimate(reset) {
+					jQuery(".ft-animate").each(function () {
+						animate(this,reset);
+					});
+				}
+				function jAnimateReset(reset) {
+					jAnimate(true);
+				}
 				window.addEventListener("scroll", event => {
 
 					var doc = document.documentElement;
@@ -91,6 +125,14 @@ define(
 						headerScroll = -headerHeight;
 					}
 					header.style.marginTop = headerScroll + "px";
+
+					jAnimate();
+
+				});
+				//make sure the animation is checked when the cms changes.
+				Backbone.on("landing-page-rendered", function () {
+					window.setTimeout(jAnimateReset, 100);
+					window.setTimeout(jAnimateReset, 500);
 				});
 
 				//live chat script
@@ -99,10 +141,10 @@ define(
 				var script = document.createElement('script');
 				script.type = 'text/javascript';
 				script.setAttribute("data-jv-id", "kvcK0uHckw");
-				script.async=true;
-				script.defer=true;
+				script.async = true;
+				script.defer = true;
 				script.src = '//code.jivosite.com/widget.js';
-				
+
 				head.appendChild(script);
 
 			}

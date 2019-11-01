@@ -27,20 +27,23 @@ define('code25.GridCCT.View', [
 			var blank = ["<h1><br></h1>", "<h2><br></h2>", "<h3><br></h3>", "<h4><br></h4>", "<h5><br></h5>", "<p><br></p>", "<a><br></a>", "<p></p>", "<br>", ""];
 			var content = ["custrecord_c25_grid_content1", "custrecord_c25_grid_content2", "custrecord_c25_grid_content3", "custrecord_c25_grid_content4", "custrecord_c25_grid_content5"];
 			var hasContent, columns = 0,
-				video, hasVideos;
+				video, hasVideos,image;
 			for (var i = 0; i < content.length; i++) {
 				hasContent = true;
 				video = this.settings["custrecord_c25_grid_video" + (i + 1)];
-				if (!video || video.length == 0) {
+				image = this.settings["custrecord_c25_grid_bgimage" + (i + 1)];
+				if ((!video || video.length == 0)&&(!image||image.length==0)) {
 					for (var j = 0; j < blank.length; j++) {
 						if (this.settings[content[i]] == blank[j]) {
 							hasContent = false;
 							break;
 						}
 					}
-				} else {
+				}else if(video&&video.length>0){
 					this.settings[content[i] + "_hasvideo"] = true;
 					hasVideos = true;
+				}else if(image&&image.length>0){
+					this.settings[content[i] + "_hasimage"] = true;
 				}
 				if (!hasContent) {
 					this.settings[content[i] + "_isempty"] = true;
@@ -66,7 +69,10 @@ define('code25.GridCCT.View', [
 					document.getElementsByTagName("head")[0].appendChild(scriptTag);
 				}
 			}
-console.log(this.settings);
+			if(this.settings["custrecord_c25_grid_bgimage"]&&this.settings["custrecord_c25_grid_bgimage"].length>0){
+				this.settings["custrecord_c25_grid_hasbgimage"]=true;
+			}
+// console.log(this.settings);
 			return this.settings;
 		}
 	});

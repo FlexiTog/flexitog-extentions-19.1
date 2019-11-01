@@ -7,6 +7,7 @@
 				<span class="product-views-price-lead" data-role="product-view-price-lead">
 					{{translate '<span itemprop="lowPrice" data-rate="$(0)" >$(1)</span> to <span itemprop="highPrice" data-rate="$(2)">$(3)</span>' minPrice minPriceFormatted maxPrice maxPriceFormatted}}
 				</span>
+				<span class="ft-price-vat">{{translate 'inc. VAT'}}</span>
 				{{#if showComparePrice}}
 					<small class="product-views-price-old">
 						{{comparePriceFormatted}}
@@ -22,6 +23,7 @@
 				<span class="product-views-price-lead" itemprop="price" data-rate="{{price}}" data-role="price-lead-formatted">
 					{{priceFormatted}}
 				</span>
+				<span class="ft-price-vat">{{translate 'inc. VAT'}}</span>
 				{{#if showComparePrice}}
 					<small class="product-views-price-old">
 						{{comparePriceFormatted}}
