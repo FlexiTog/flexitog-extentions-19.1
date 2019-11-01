@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"subtab": {
+		"id": "countdown",
+		"title": "Countdown",
+		"description": "Extensions configuration",
+		"group": "extensions",
+		"docRef": "section_1535961080"
+	},
+	"properties": {
+		"countdown.showClock": {
+			"group": "extensions",
+			"subtab": "countdown",
+			"type": "boolean",
+			"title": "Show Clock",
+			"description": "Show the countdown clock on this website.",
+			"default": false
+		}
+	}
+}

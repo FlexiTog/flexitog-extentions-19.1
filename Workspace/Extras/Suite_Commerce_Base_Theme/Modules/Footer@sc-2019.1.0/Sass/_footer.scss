@@ -1,7 +1,7 @@
 footer {
     background: $sc-footer-background-color;
-    border-top: 1px solid $sc-footer-border-color;
     color: $sc-footer-text-color;
+    font-size: $sc-font-size-xs;
 
     p {
         color: $sc-footer-text-color;
@@ -10,7 +10,6 @@ footer {
 
     a {
         color: $sc-footer-link-color;
-        margin-right: $sc-margin-lv2;
 
         &:hover {
             color: $sc-footer-link-color-hover;
@@ -56,15 +55,12 @@ footer {
     @extend .row;
     margin: auto;
     text-align: center;
-    padding: $sc-padding-lv6 0 0;
+    padding-top: $sc-padding-lv1;
+        padding-bottom: $sc-padding-lv1;
     
     @media (min-width: $screen-sm-min) {
-        padding-top: $sc-padding-lv5;
-        padding-bottom: $sc-padding-lv5;
-    }
-
-    @media (min-width: $screen-md-min) {
-        text-align: left;
+        padding-top: $sc-padding-lv2;
+        padding-bottom: $sc-padding-lv2;
     }
 }
 
@@ -73,5 +69,15 @@ footer {
 }
 
 .footer-content-col2 {
-    @extend .col-md-2;
+    @extend .col-sm-3;
+    @extend .col-xs-6;
+    border-right:1px solid $sc-color-theme-700;
+    &:last-child{
+        border-right:none;
+    }
+    @media (max-width: $screen-xs-max) {
+        &:nth-child(even) {
+            border-right:none;
+        }
+    }
 }

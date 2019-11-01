@@ -13,9 +13,8 @@
 
 .item-cell-title {
 	@extend .xsmall-title-navigable;
-	padding: $sc-padding-lv2 0;
 	display: block;
-	text-align: left;
+	text-align: center;
 }
 
 .item-cell-price {

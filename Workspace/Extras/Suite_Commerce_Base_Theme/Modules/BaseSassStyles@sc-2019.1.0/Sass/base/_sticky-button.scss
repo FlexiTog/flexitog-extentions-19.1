@@ -1,25 +1,10 @@
+$sc-main-nav-mobile-height: 54px;
 [data-type="sticky"].sticked {
-	@media (max-width: $screen-xs) {
-		visibility: hidden;
-	}
+	display: none;
 }
 
 .sticky-button-container-clone {
 	display: none;
 
-	@media (max-width: $screen-sm) and (orientation: portrait) {
-		&.sticked {
-			display: block;
-			position: fixed;
-			top: 0px;
-			width: 100%;
-			z-index: 99;
-			margin-left: -15px;
-			background-color: white;
-			padding-bottom: 20px;
-			padding-left: 15px;
-			padding-right: 15px;
-			padding-top: 20px;
-		}
-	}
+	
 }

@@ -13,8 +13,12 @@
 .global-views-breadcrumb {
 	@extend .breadcrumb;	
 	font-size:14px;
+	margin-top:$sc-margin-lv2;
 }
 
 .global-views-breadcrumb-divider-icon {
 	@extend .breadcrumb-divider-icon;
+}
+.banner-breadcrumb-top,.banner-breadcrumb-bottom{
+	display:none;
 }

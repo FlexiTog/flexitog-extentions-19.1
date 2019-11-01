@@ -2,22 +2,22 @@
 $sc-main-navigation-background-color: $sc-header-background-color; /* editable({"type": "color", "label": "Background"}) */
 
 $sc-main-navigation-link-background-color: $sc-header-background-color;
-$sc-main-navigation-link-color: $sc-color-secondary; /* editable({"type": "color", "label": "Link"}) */
-$sc-main-navigation-link-text-transform: capitalize;
+$sc-main-navigation-link-color: $flexitog-white; /* editable({"type": "color", "label": "Link"}) */
+$sc-main-navigation-link-text-transform: uppercase;
 $sc-main-navigation-link-letter-spacing: 0;
 $sc-main-navigation-link-border-color: initial;
 $sc-main-navigation-link-border-top-width: 0;
 $sc-main-navigation-link-border-bottom-width: 0;
 $sc-main-navigation-link-margin-right: $sc-margin-lv1;
 
-$sc-main-navigation-link-hover-background-color: $sc-header-background-color;
-$sc-main-navigation-link-hover-color: $sc-color-link-hover; /* editable({"type": "color", "label": "Link hover"}) */
+$sc-main-navigation-link-hover-background-color: $flexitog-white;
+$sc-main-navigation-link-hover-color: $sc-color-copy-dark; /* editable({"type": "color", "label": "Link hover"}) */
 $sc-main-navigation-link-hover-border-color: initial;
 $sc-main-navigation-link-hover-border-top-width: 0;
 $sc-main-navigation-link-hover-border-bottom-width: 0;
 
-$sc-main-navigation-link-active-background-color: $sc-header-background-color;
-$sc-main-navigation-link-active-color: $sc-color-link-active; /* editable({"type": "color", "label": "Link active"}) */
+$sc-main-navigation-link-active-background-color: $flexitog-darkred;
+$sc-main-navigation-link-active-color:$flexitog-white; /* editable({"type": "color", "label": "Link active"}) */
 $sc-main-navigation-link-active-border-color: initial;
 $sc-main-navigation-link-active-border-top-width: 0;
 $sc-main-navigation-link-active-border-bottom-width: 0;
@@ -33,9 +33,9 @@ $sc-main-navigation-submenu-link-hover-color: $sc-color-link-hover;
 $sc-main-navigation-submenu-link-active-color: $sc-color-copy;
 
 // Mobile navigation variables
-$sc-mobile-navigation-hamburger-icon-color: $sc-color-secondary;
+$sc-mobile-navigation-hamburger-icon-color: $flexitog-white;
 $sc-mobile-navigation-sidebar-overlay-color: $sc-neutral-shade-500;
-$sc-mobile-navigation-background-color: $sc-color-theme-background;
+$sc-mobile-navigation-background-color: $flexitog-white;
 
 $sc-mobile-navigation-link-background-color: $sc-color-theme-background;
 $sc-mobile-navigation-link-color: $sc-color-secondary;
@@ -51,14 +51,14 @@ $sc-top-menu-border-color: $sc-color-theme-border-light;
 
 // Top Menu links variables
 $sc-top-menu-link-background-color: $sc-top-menu-background-color;
-$sc-top-menu-link-text-color: $sc-color-secondary; /* editable({"type": "color", "label": "Link"}) */
+$sc-top-menu-link-text-color: $flexitog-white; /* editable({"type": "color", "label": "Link"}) */
 $sc-top-menu-link-text-transform: none;
 $sc-top-menu-link-border-color: initial;
 $sc-top-menu-link-border-top-width: 0;
 $sc-top-menu-link-border-bottom-width: 0;
 
-$sc-top-menu-link-hover-background-color: $sc-top-menu-background-color;
-$sc-top-menu-link-hover-text-color: $sc-color-link-hover; /* editable({"type": "color", "label": "Link hover"}) */
+$sc-top-menu-link-hover-background-color: $flexitog-white;
+$sc-top-menu-link-hover-text-color: $sc-color-copy-dark; /* editable({"type": "color", "label": "Link hover"}) */
 $sc-top-menu-link-hover-border-color: initial;
 $sc-top-menu-link-hover-border-top-width: 0;
 $sc-top-menu-link-hover-border-bottom-width: 0;

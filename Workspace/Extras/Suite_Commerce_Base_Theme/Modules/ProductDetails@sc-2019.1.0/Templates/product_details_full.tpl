@@ -4,7 +4,7 @@
 	<header class="product-details-full-header">
 		<div id="banner-content-top" class="product-details-full-banner-top"></div>
 	</header>
-	<div class="product-details-full-divider-desktop"></div>
+	
 	<article class="product-details-full-content" itemscope itemtype="https://schema.org/Product">
 		<meta itemprop="url" content="{{itemUrl}}">
 		<div id="banner-details-top" class="product-details-full-banner-top-details"></div>

@@ -189,7 +189,7 @@ select {
 
 .selector {
 	display: block;
-	margin: $sc-margin-lv3;
+	margin: $sc-margin-lv2 $sc-margin-lv2 0 $sc-margin-lv2;
 	float: left;
 	@media(min-width: $screen-md-min) {
 		margin: 0px;
