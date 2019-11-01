@@ -14,6 +14,7 @@ define(
 				// more documentation of the Extensibility API in
 				// https://system.netsuite.com/help/helpcenter/en_US/APIs/SuiteCommerce/Extensibility/Frontend/index.html
 
+				try{
 				var CMS = container.getComponent('CMS');
 				CMS.registerCustomContentType({
 					id: 'c25_banner',
@@ -77,24 +78,24 @@ define(
 					headerScroll = 0;
 
 
-				function animate(element,reset) {
+				function animate(element, reset) {
 					var $this = jQuery(element);
-if(reset){
-	$this.removeClass("ft-animate-play")
-}
+					if (reset) {
+						$this.removeClass("ft-animate-play")
+					}
 					if (!$this.hasClass("ft-animate-play")) {
 
 						var $parent = jQuery(parent);
 
 						var win = $(window);
 
-						
+
 
 						$this.find("h1,h2,h3,h4,h5,h6,p").each(function () {
 							var $el = $(this);
 							var top = $el.offset().top;
-							if (top < win.scrollTop() + win.height() -50) {
-									$this.addClass("ft-animate-play");
+							if (top < win.scrollTop() + win.height() - 50) {
+								$this.addClass("ft-animate-play");
 							}
 						});
 
@@ -103,9 +104,10 @@ if(reset){
 
 				function jAnimate(reset) {
 					jQuery(".ft-animate").each(function () {
-						animate(this,reset);
+						animate(this, reset);
 					});
 				}
+
 				function jAnimateReset(reset) {
 					jAnimate(true);
 				}
@@ -146,7 +148,9 @@ if(reset){
 				script.src = '//code.jivosite.com/widget.js';
 
 				head.appendChild(script);
-
+			}catch(err){
+				console.error(err);
+			}
 			}
 		};
 	});

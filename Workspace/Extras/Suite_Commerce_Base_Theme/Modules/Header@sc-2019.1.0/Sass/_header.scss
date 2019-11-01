@@ -406,6 +406,7 @@ border-top-right-radius: 2px;
 	font-size:$sc-font-size-m;
 	&:focus{
 		background-color: $flexitog-white;
+		color:$sc-color-copy-dark;
 	}
 }
 

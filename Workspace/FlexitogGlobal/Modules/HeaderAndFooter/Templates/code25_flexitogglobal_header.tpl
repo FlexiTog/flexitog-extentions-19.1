@@ -36,8 +36,9 @@
 						<ul class="ft-bullet-list">
 							<li><i class="header-menu-envelope-icon"></i></li>
 							<li>
-								<h5>{{translate 'Sales, Orders & Customer Service'}}</h5>
-								<p>{{translate 'Email sales orders or general enquires for a promt quick reply from our customer services team.'}}
+								<h5>{{translate 'Email'}}</h5>
+								<p>{{translate 'Email sales orders or general enquires for a promt quick reply from our customer services team.'}}<br />
+								<a href="mailto:sales@flexitog.com">Sales@FlexiTog.com</a>
 								</p>
 							</li>
 						</ul>
@@ -64,7 +65,7 @@
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00441692400300" class="header-subheader-settings-link">+44 01692 400 300 <i
+					<a href="tel:00441692400300" class="header-subheader-settings-link">+44 (0) 1692 400 300 <i
 							class="header-phone-icon"></i></a>
 				</li>
 
