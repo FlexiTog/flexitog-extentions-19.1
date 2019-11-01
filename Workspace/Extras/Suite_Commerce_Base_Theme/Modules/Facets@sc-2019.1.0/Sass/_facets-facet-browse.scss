@@ -33,6 +33,7 @@
 
 .facets-facet-browse-list-header-actions {
 	@extend .list-header-actions;
+	display:none;
 }
 
 .facets-facet-browse-list-header-expander {
@@ -104,7 +105,7 @@
 
 .facets-facet-browse-facets {
 	@extend .col-md-3;
-	@include box-shadow(0 0 6px $sc-color-secondary);
+	
 	padding: 0;
 	background-color: $sc-neutral-shade-0;
 	overflow-x:hidden;
@@ -123,7 +124,7 @@
 }
 
 .facets-facet-browse-results {
-	@extend .col-md-9;
+	@extend .col-xs-12;
 	padding: 0;
 }
 

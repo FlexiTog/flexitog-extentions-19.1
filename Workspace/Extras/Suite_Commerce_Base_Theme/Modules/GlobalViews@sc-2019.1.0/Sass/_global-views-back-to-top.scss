@@ -4,6 +4,12 @@
     display: block;
     text-align:center;
     padding-bottom: $sc-padding-lv3;
+    a{
+        color: $sc-neutral-shade-300;
+        i{
+            color:inherit;
+        }
+    }
 
     @media (min-width: $screen-sm-min) {
         display: none;

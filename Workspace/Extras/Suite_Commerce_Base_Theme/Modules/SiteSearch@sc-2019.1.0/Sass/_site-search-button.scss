@@ -3,43 +3,40 @@
 .site-search-button-link {
 	margin-right: 0;
 	cursor: pointer;
-	background: none;
-
-	@media (max-width: $screen-sm-min) {
-		display: block;
-		height: $sc-target-size;
-		color: $sc-color-theme-700;
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-	}
-
-	@media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
-		margin-right: $sc-margin-lv2;
-	}
+	background-color: $flexitog-darkred;
+	color: $flexitog-white;
+	margin-left: $sc-margin-lv2;
+	margin-right: 0px;
+	font-size: $sc-font-size-xl;
+	line-height:$sc-target-size;
+	padding: 0px 2px;
+	vertical-align:middle;
+	box-sizing: content-box;
+	position: relative;
+	outline: none;
+	height: $sc-target-size;
+	width: $sc-target-size;
+	text-align: center;
+	border-radius: 2px;
 
 	@media (min-width: $screen-md-min) {
-		font-size: $sc-font-size-xl;
-		background: none;
-		padding: $sc-padding-lv2;
-		color: $sc-color-secondary;
-		cursor: pointer;
-		position: relative;
-		line-height: 34px;
+		display: none;
 	}
 }
+
 .site-search-button-link:hover {
-	color: $sc-color-copy;
-	@media (min-width: $screen-md-min) {
-		color: $sc-color-theme-500;
+	i {
+		color: $sc-color-copy-dark;
 	}
-}
-.site-search-button-link.active {
-	background: $sc-color-theme-background;
-	color: $sc-color-copy-dark;
 
-	@media (min-width: $screen-md-min) {
-		color: $sc-color-copy;
+	background-color:$flexitog-white;
+}
+
+.site-search-button-link.active {
+	background-color: $flexitog-white;
+
+	i {
+		color: $sc-color-copy-dark;
 	}
 }
 
@@ -47,15 +44,6 @@
 	@extend .fa;
 	@extend %fa-search;
 
-	color: $sc-color-secondary;
-	font-size: $sc-font-size-l;
-	
-	@media (max-width: $screen-sm-min) {
-		line-height: $sc-target-size;
-		min-width: $sc-target-size;
-	}
-
-	@media (min-width: $screen-md-min) {
-		font-size: $sc-font-size-xxl;
-	}
+	color: $flexitog-white;
+	font-size: $sc-font-size-xl;
 }

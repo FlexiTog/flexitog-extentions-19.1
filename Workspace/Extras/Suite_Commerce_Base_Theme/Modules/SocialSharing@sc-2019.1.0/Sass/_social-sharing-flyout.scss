@@ -64,6 +64,9 @@ $sc-color-social-sharing-flyout-content-social-pinterest-icon: #bd071d;
 	@extend .fa;
 	@extend %fa-google-plus-square;
 }
+.social-sharing-flyout-content-social-google{
+	display:none;
+}
 .social-sharing-flyout-content-social-pinterest-icon {
 	color: $sc-color-social-sharing-flyout-content-social-pinterest-icon;
 	font-size: 20px;

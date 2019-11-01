@@ -22,7 +22,7 @@
 
 //applies only to the myaccount menu on desktop header
 .header-menu-profile {
-
+float:none;
 	.header-menu-myaccount-anchor {
 		display: none;
 	}
@@ -75,6 +75,17 @@
 		@extend %fa-sign-out;
 		font-size: $sc-font-size-m;
 	}
+}
+.header-menu-myaccount-overview-anchor-2{
+	@extend .header-menu-myaccount-overview-anchor;
+	color:$sc-color-link!important;
+}
+.header-menu-myaccount-overview-divider{
+	@extend .header-menu-myaccount-overview-anchor;
+	color:$sc-color-link!important;
+	padding-left:$sc-padding-lv2!important;
+	padding-right:$sc-padding-lv2!important;
+	display:inline-block;
 }
 
 .header-menu-myaccount-level4 {

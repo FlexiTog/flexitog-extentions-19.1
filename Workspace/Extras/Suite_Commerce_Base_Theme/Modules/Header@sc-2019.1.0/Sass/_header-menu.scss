@@ -29,73 +29,84 @@
 //header maxi menu
 
 .header-menu-level1 {
-	margin-left: - ($sc-padding-lv2);
-	position: relative;
+	margin-left: 0;
 }
 
-.header-menu-level1 > li {
-	float: left;
+.header-menu-level1>li {
+	@media (min-width: $screen-md-min) {
+		float: left;
+	}
 }
 
 .header-menu-level1-anchor {
 	display: block;
 	position: relative;
+	box-sizing: border-box;
+	padding: 0 $sc-padding-lv2;
+	height: $sc-target-size;
+	color: $sc-color-copy;
+	width: 100%;
+	text-transform: $sc-main-navigation-link-text-transform;
+	font-size: $sc-font-size-m;
 
-	padding: $sc-padding-lv2;
-	margin-right: $sc-main-navigation-link-margin-right;
+	line-height: $sc-target-size;
 
-	color: $sc-main-navigation-link-color;
-    background-color: $sc-main-navigation-link-background-color;
-    font-weight: $sc-font-weight-semibold;
-    text-transform: $sc-main-navigation-link-text-transform;
-    letter-spacing: $sc-main-navigation-link-letter-spacing;
+	border-bottom: 1px solid $sc-color-theme-border;
 
-    border-style: solid;
-	border-color: $sc-main-navigation-link-border-color;
-
-	border-top-width: $sc-main-navigation-link-border-top-width;
-	padding-top: ($sc-padding-lv2) - ($sc-main-navigation-link-border-top-width);
-
-	border-bottom-width: $sc-main-navigation-link-border-bottom-width;
-	padding-bottom: ($sc-padding-lv2) - ($sc-main-navigation-link-border-bottom-width);
-	line-height: 34px;
-
-    &:hover, &:focus{
-		color: $sc-main-navigation-link-hover-color;
-		background-color: $sc-main-navigation-link-hover-background-color;
-
-		border-style: solid;
-		border-color: $sc-main-navigation-link-hover-border-color;
-
-		border-top-width: $sc-main-navigation-link-hover-border-top-width;
-		padding-top: ($sc-padding-lv2) - ($sc-main-navigation-link-hover-border-top-width);
-
-		border-bottom-width: $sc-main-navigation-link-hover-border-bottom-width;
-		padding-bottom: ($sc-padding-lv2) - ($sc-main-navigation-link-hover-border-bottom-width);
+	&:hover {
+		color: $sc-color-copy-dark;
+		background-color: $sc-color-theme-background;
 	}
 
 	&:active {
-		color: $sc-main-navigation-link-active-color;
-		background-color: $sc-main-navigation-link-active-background-color;
+		color: $sc-color-copy-dark;
+		background-color: $sc-color-theme-background;
+	}
 
-		border-style: solid;
-		border-color: $sc-main-navigation-link-active-border-color;
+	@media (min-width: $screen-md-min) {
+		box-sizing: content-box;
+		border-bottom: none;
+		border-right: 1px solid rgba(255, 255, 255, .3);
 
-		border-top-width: $sc-main-navigation-link-active-border-top-width;
-		padding-top: ($sc-padding-lv2) - ($sc-main-navigation-link-active-border-top-width);
+		background-color: $sc-main-navigation-link-background-color;
+		color: $sc-main-navigation-link-color;
+		width: auto;
 
-		border-bottom-width: $sc-main-navigation-link-active-border-bottom-width;
-		padding-bottom: ($sc-padding-lv2) - ($sc-main-navigation-link-active-border-bottom-width);
+		&:hover {
+			color: $sc-main-navigation-link-hover-color;
+			background-color: $sc-main-navigation-link-hover-background-color;
+		}
+
+		&:active {
+			color: $sc-main-navigation-link-active-color;
+			background-color: $sc-main-navigation-link-active-background-color;
+		}
+		&:focus {
+			color: $sc-main-navigation-link-active-color;
+			background-color: $sc-main-navigation-link-active-background-color;
+		}
 	}
 }
 
-.open .header-menu-level1-anchor{
-	color: $sc-main-navigation-link-active-color;
+@media (min-width: $screen-md-min) {
+	.header-menu-level1 {
+		li:last-child {
+			a.header-menu-level1-anchor {
+				border-right: 0px none transparent;
+			}
+		}
+	}
+
+	.open .header-menu-level1-anchor {
+		color: $sc-main-navigation-link-hover-color;
+		background-color: $sc-main-navigation-link-hover-background-color;
+		border-bottom: 20px solid $flexitog-white;
+	}
 }
 
 .header-menu-home-anchor,
-.header-menu-shop-anchor{
-	@extend .header-menu-level1-anchor;
+.header-menu-shop-anchor {
+	display: none;
 }
 
 //maxi menu level 2
@@ -103,10 +114,16 @@
 	display: none;
 }
 
-.header-menu-level2 > li {
+.header-menu-level2>li {
 	float: left;
-	width: 20%;
-	padding-right: $sc-padding-lv6;
+	width: 25%;
+	border-right: 1px solid $sc-color-theme-border-light;
+	margin-bottom: $sc-margin-lv1;
+
+	&:last-child,&:nth-child(4),&:nth-child(8),&:nth-child(12) {
+		border-right: 0px none transparent;
+	}
+
 }
 
 .header-menu-level2-anchor {
@@ -114,9 +131,7 @@
 	text-decoration: $sc-main-navigation-submenu-heading-text-decoration;
 	font-weight: $sc-font-weight-semibold;
 	color: $sc-main-navigation-submenu-heading-color;
-	padding-bottom: $sc-padding-lv1;
-	margin-bottom: $sc-margin-lv2;
-	border-bottom: 1px solid $sc-main-navigation-submenu-heading-border-color;
+
 	display: block;
 
 	&:hover {
@@ -130,65 +145,53 @@
 	padding: $sc-padding-lv1 0;
 	color: $sc-main-navigation-submenu-link-color;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $sc-main-navigation-submenu-link-hover-color;
 	}
 
-	&:active, &.active {
+	&:active,
+	&.active {
 		color: $sc-main-navigation-submenu-link-active-color;
 	}
 }
 
 //container fix for maxi menu on desktop
-.header-menu-push-icon, .header-menu-pop-icon {
+.header-menu-push-icon,
+.header-menu-pop-icon {
 	display: none;
 }
 
 .header-menu-level-container {
-	background-color: $sc-main-navigation-submenu-background-color;
 	display: none;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	min-height: 150px;
-	z-index: 1003;
-	padding: $sc-padding-lv5 0;
-	border-bottom: 1px solid $sc-color-theme-border-light;
-	border-top: 1px solid $sc-color-theme-border-light;
-	@include box-shadow(0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175));
 
-	> li {
-		@extend .container;
-	}
+	
+		background-color: $sc-main-navigation-submenu-background-color;
+
+		position: absolute;
+		left: 0;
+		width: 100%;
+		min-height: 150px;
+		z-index: 1003;
+
+		border-bottom: 1px solid $sc-color-theme-border-light;
+
+		@include box-shadow(0 6px 6px transparentize($sc-neutral-shade-500, 1-0.175));
+
+		>li {
+			@extend .container;
+			padding: $sc-padding-lv6 $sc-padding-lv7;
+		}
+
+		a {
+			color: $sc-color-copy-light;
+		}
+	
 }
 
 //maxi menu opened
-.open .header-menu-level-container {
-	display: block;
-}
-
-.open .header-menu-level1-anchor:before{
-	position: absolute;
-	top: 47px;
-	left: 50%;
-	margin-left: -7.5px;
-	display: inline-block;
-	border-right: 7px solid transparent;
-	border-bottom: 7px solid $sc-neutral-shade-0;
-	border-left: 7px solid transparent;
-	border-bottom-color: transparentize($sc-neutral-shade-500, 1-0.2);
-	content: '';
-}
-
-.open .header-menu-level1-anchor:after{
-	position: absolute;
-	top: 48px;
-	left: 50%;
-	margin-left: -6.5px;
-	display: inline-block;
-	border-right: 6px solid transparent;
-	border-bottom: 6px solid $sc-neutral-shade-0;
-	border-left: 6px solid transparent;
-	content: '';
-	z-index: 9999;
+@media (min-width: $screen-md-min) {
+	.open .header-menu-level-container {
+		display: block;
+	}
 }

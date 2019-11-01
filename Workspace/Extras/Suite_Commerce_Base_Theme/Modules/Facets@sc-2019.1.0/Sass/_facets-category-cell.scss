@@ -1,33 +1,50 @@
 .facets-category-cell
 {
-	float: left;
-	position: relative;
-	min-height: 1px;
-	padding-left: $sc-margin-lv2;
-	padding-right: $sc-margin-lv2;
-	text-align: center;
-	margin-bottom: $sc-margin-lv6;
-	width: 50%;
+	display:inline-block;
+	background-color: $sc-color-theme-background;
+	padding: $sc-padding-lv2;
+	margin-right:$sc-margin-lv3;
+	color:$sc-color-copy;
+	text-transform: uppercase;
+	margin-bottom: $sc-margin-lv2;
 
-	@media (min-width: $screen-md-min)
-	{
-		width: 25%;
+	&:hover {
+		color:$sc-color-copy-dark;
+		background-color: $sc-color-theme-300;
+
+			color: darken($sc-color-secondary,20);
+		
 	}
 
 }
+.facets-category-cell:active{
+	background-color:$sc-color-secondary;
+		color: $flexitog-white;
+}
+.facets-category-cells{
+	margin-top:$sc-margin-lv6;
+	display:block;
+text-align:center;
+margin-bottom:$sc-margin-lv2;
+}
 
 
-
-.facets-category-cell-image
+.facets-category-cell-thumbnail
 {
-	width: 100%;
-	height: auto;
-
+	width: 32px;
+	height: 32px;
 }
 
 .facets-category-cell-title
 {
-	padding: $sc-padding-lv2 $sc-padding-lv1 * 0
+		padding-left: $sc-padding-lv2;
+		padding-right: $sc-padding-lv2;
+	
+	color: $sc-color-copy-dark;
+	text-transform: uppercase;
+	font-size:$sc-font-size-l;
+	
+
 }
 
 

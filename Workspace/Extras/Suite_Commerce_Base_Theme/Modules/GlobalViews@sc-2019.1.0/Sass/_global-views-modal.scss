@@ -4,7 +4,7 @@
 .global-views-modal-content {
 	@extend .modal-content;
 	padding: $sc-margin-lv4 + $sc-margin-lv1;
-	border-radius: 10px;
+	border-radius: 0px;
 	display: block;
 	-webkit-box-shadow: 0 2px 5px transparentize($sc-neutral-shade-500, 1-0.2);
 	box-shadow: 0 2px 5px transparentize($sc-neutral-shade-500, 1-0.2);

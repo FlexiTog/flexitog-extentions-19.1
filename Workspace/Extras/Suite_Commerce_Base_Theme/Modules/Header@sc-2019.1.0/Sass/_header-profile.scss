@@ -20,28 +20,15 @@
 }
 
 .header-profile-welcome-link-name{
-	display: block;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-
-	@media (min-width: $screen-md-min){
-		display: inline;
-	}
+	display: inline;
 }
 
 .header-profile-welcome-user-icon{
 	@extend .fa;
-	@extend %fa-user;
+	@extend %fa-user-circle;
 
-	float:left;
 	font-size: $sc-font-size-l;
-	padding: $sc-padding-lv1 0;
-	margin-right: $sc-margin-lv3;
-
-	@media (min-width: $screen-md-min){
-		display: none;
-	}
+	color:inherit!important;
 }
 
 .header-profile-welcome-carret-icon{
@@ -82,8 +69,11 @@
 .header-profile-menu-myaccount-container {
 	@extend .header-menu-level-container;
 	padding: $sc-padding-lv3 0 $sc-padding-lv7;
-	z-index: 1002;
+	z-index: 1005;
+	
 }
+
+
 
 .open .header-profile-welcome-link:before {
 	position: absolute;
