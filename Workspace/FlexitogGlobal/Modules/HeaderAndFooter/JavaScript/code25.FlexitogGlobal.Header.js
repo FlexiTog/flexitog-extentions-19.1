@@ -38,28 +38,32 @@ define(
 				'click [data-type="header-sidebar-menu"]': 'hideSidebar',
 				'click .header-menu-level1-anchor': 'clickTopLevel',
 				'click .header-menu-level2-anchor': 'hideSidebar',
-				'mouseenter #header-quick-link':'startHover',
-				'mousemove #header-quick-link':'startHover',
-				'mouseleave #header-quick-link':'stopHover',
-				'mouseenter #header-cart-link':'startHover',
-				'mousemove #header-cart-link':'startHover',
-				'mouseleave #header-cart-link':'stopHover'
-				
-			}
-,startHover:function(e){
-	var self=this;
-	if(this.hoverTimeout){
-	clearTimeout(this.hoverTimeout);
-	}
-	this.hoverTimeout=setTimeout(function(){self.isHover(e);},100)
-}
-,stopHover:function(){
-	clearTimeout(this.hoverTimeout);
-}
-,isHover:function(e){
-	e.target.click();
-}
-			,
+				'mouseenter #header-quick-link': 'startHover',
+				'mousemove #header-quick-link': 'startHover',
+				'mouseleave #header-quick-link': 'stopHover',
+				'mouseenter #header-cart-link': 'startHover',
+				'mousemove #header-cart-link': 'startHover',
+				'mouseleave #header-cart-link': 'stopHover'
+
+			},
+			startHover: function (e) {
+				var self = this;
+				if (this.hoverTimeout) {
+					clearTimeout(this.hoverTimeout);
+				}
+				this.hoverTimeout = setTimeout(function () {
+					self.isHover(e);
+				}, 100)
+			},
+			stopHover: function () {
+				clearTimeout(this.hoverTimeout);
+			},
+			isHover: function (e) {
+
+				if(!$(e.target).closest("div").hasClass("open")){
+				e.target.click();
+				}
+			},
 			initialize: function () {
 					Backbone.history.on('all', this.verifyShowSiteSearch, this);
 				}
@@ -103,13 +107,13 @@ define(
 			clickTopLevel: function (e) {
 					var mobileMenu = jQuery(".header-sidebar-toggle-wrapper").css("display") == "block";
 					if (mobileMenu) {
-						
+
 						e.preventDefault();
 						e.stopPropagation();
-						var Li=jQuery(e.target).closest('li');
-						var currentLi=Li[0];
-						Li.parent().find("li").each(function(){
-							if(this!=currentLi){
+						var Li = jQuery(e.target).closest('li');
+						var currentLi = Li[0];
+						Li.parent().find("li").each(function () {
+							if (this != currentLi) {
 								$(this).removeClass("ft-mobile-sub-cat");
 								$(this).find(".header-menu-level-mobile-container").slideUp();
 							}
@@ -118,7 +122,7 @@ define(
 						Li.find(".header-menu-level-mobile-container").slideToggle();
 
 					} else {
-						
+
 						this.hideSidebar(e);
 					}
 				}

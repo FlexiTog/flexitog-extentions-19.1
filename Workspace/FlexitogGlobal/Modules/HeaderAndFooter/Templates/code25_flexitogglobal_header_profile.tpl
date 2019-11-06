@@ -6,21 +6,24 @@
 	<p>{{translate 'Sign in / Register'}}</p>
 	{{/if}}
 </a>
-
+{{#if showExtendedMenu}}
 <a class="header-subheader-settings-link" href="#" data-toggle="dropdown">
-	{{#if showExtendedMenu}}
 	{{translate 'My Account'}}
-	{{else}}
-	{{translate 'Sign in / Register'}}
-	{{/if}}
 	<i class="header-profile-welcome-user-icon"></i>
 </a>
-
 {{#if showMyAccountMenu}}
 <ul class="header-profile-menu-myaccount-container">
 	<li data-view="code25.FlexitogGlobal.Menu.MyAccount"></li>
 </ul>
 {{/if}}
+{{else}}
+<a class="header-subheader-settings-link" href="#" data-touchpoint="customercenter" name="myaccount">
+
+	{{translate 'Sign in / Register'}}
+	<i class="header-profile-welcome-user-icon"></i>
+</a>
+{{/if}}
+
 
 
 {{!----

@@ -1,9 +1,9 @@
 define(
 	'code25.FlexitogGlobal.Main', [
-		'Utils', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View'
+		'SC.Configuration', 'Utils', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'GlobalViews.Message.View'
 	],
 	function (
-		Utils, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView
+		Configuration, Utils, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, GlobalViewsMessageView
 	) {
 		'use strict';
 
@@ -35,26 +35,26 @@ define(
 					var environmentComponent = container.getComponent('Environment');
 					var lang = ['en', 'en_US', 'en_GB'];
 					for (var i = 0; i < lang.length; i++) {
-						// environmentComponent.setTranslation(lang[i], [{
-						// 	key: 'Welcome to the store',
-						// 	value: 'FlexiTog | Thermal clothing for Cold stores, Freezers and Winter wear'
-						// }]);
-						environmentComponent.setTranslation(lang[i], [{
-							key: 'Add to Wishlist',
-							value: 'Add to Product List'
-						}]);
-						environmentComponent.setTranslation(lang[i], [{
-							key: 'Added to Wishlist',
-							value: 'Added to Product List'
-						}]);
-						environmentComponent.setTranslation(lang[i], [{
-							key: "My Wishlist",
-							value: 'My Product List'
-						}]);
-						environmentComponent.setTranslation(lang[i], [{
-							key: 'Wishlist',
-							value: 'Product List'
-						}]);
+						try {
+							environmentComponent.setTranslation(lang[i], [{
+								key: 'Add to Wishlist',
+								value: 'Add to Product List'
+							}]);
+							environmentComponent.setTranslation(lang[i], [{
+								key: 'Added to Wishlist',
+								value: 'Added to Product List'
+							}]);
+							environmentComponent.setTranslation(lang[i], [{
+								key: "My Wishlist",
+								value: 'My Product List'
+							}]);
+							environmentComponent.setTranslation(lang[i], [{
+								key: 'Wishlist',
+								value: 'Product List'
+							}]);
+						} catch (e) {
+							console.log(e);
+						}
 					}
 
 
@@ -71,14 +71,14 @@ define(
 					layout.addChildView('Countdown', function () {
 						return new CountdownView({});
 					});
-//extend the category cells to include an active value and optional siblings.
+					//extend the category cells to include an active value and optional siblings.
 					_.extend(FacetsCategoryCellView.prototype, {
 						getContext: _.wrap(FacetsCategoryCellView.prototype.getContext, function (getContext, options) {
 							var res = getContext.apply(this, _.rest(arguments));
-							res.active=this.model.get("active");
-								return res;
-							})
-						});
+							res.active = this.model.get("active");
+							return res;
+						})
+					});
 
 					//show siblings when there are no sub categories
 					FacetsBrowseView.prototype.childViews['Facets.CategoryCells'] = function () {
@@ -91,10 +91,10 @@ define(
 							}
 						}
 						//console.log(Backbone.history.fragment);
-						for(var i=0;i<catllist.length;i++){
-							catllist[i].active=catllist[i].fullurl=="/"+Backbone.history.fragment;
+						for (var i = 0; i < catllist.length; i++) {
+							catllist[i].active = catllist[i].fullurl == "/" + Backbone.history.fragment;
 						}
-						
+
 						return new BackboneCollectionView({
 							childView: FacetsCategoryCellView,
 							collection: catllist
@@ -114,18 +114,20 @@ define(
 						});
 					}
 					//override the home page type.
-					var pageType = container.getComponent('PageType');
+					if (SC.ENVIRONMENT.SCTouchpoint == "shopping") {
+						var pageType = container.getComponent('PageType');
 
-					pageType.registerPageType({
-						'name': 'home-page',
-						'routes': ['', '?*params'],
-						'view': HomeView,
-						'defaultTemplate': {
-							'name': 'home.tpl',
-							'displayName': 'Home Default',
-							'thumbnail': Utils.getAbsoluteUrl('img/default-layout-home.png')
-						}
-					});
+						pageType.registerPageType({
+							'name': 'home-page',
+							'routes': ['', '?*params'],
+							'view': HomeView,
+							'defaultTemplate': {
+								'name': 'home.tpl',
+								'displayName': 'Home Default',
+								'thumbnail': Utils.getAbsoluteUrl('img/default-layout-home.png')
+							}
+						});
+					}
 
 					//Header Scroll
 					var lastScroll = 0,
@@ -228,6 +230,36 @@ define(
 						}
 					} else if (SC.ENVIRONMENT.SCTouchpoint == "checkout") {
 						// Override some PO numbers to add validation.
+						var WizardStep = require("Wizard.Step");
+						if (WizardStep) {
+							WizardStep.prototype.showError = function () {
+								try {
+									if (this.error) {
+										console.log("Checkout Error:", this.error);
+										var msg = this.error.errorMessage;
+										var code=this.error.errorCode;
+										if (code!="ERR_WS_UNHANDLED_ERROR"&&msg != "An error has occured") {
+											var global_view_message = new GlobalViewsMessageView({
+												message: this.wizard.processErrorMessage(this.error.errorMessage),
+												type: 'error',
+												closable: true
+											});
+
+											this.$('[data-type="alert-placeholder-step"]').html(global_view_message.render().$el.html());
+
+											jQuery('body').animate({
+												scrollTop: jQuery('body .global-views-message-error:first').offset().top
+											}, 600);
+										} else {
+											console.log("Error Message:", msg)
+										}
+										this.error = null;
+									}
+								} catch (e) {
+									console.log(e);
+								}
+							}
+						}
 
 						var OrderWizardModulePaymentMethodPurchaseNumber = require("OrderWizard.Module.PaymentMethod.PurchaseNumber");
 						if (OrderWizardModulePaymentMethodPurchaseNumber) {
@@ -249,6 +281,25 @@ define(
 
 							}
 							OrderWizardModulePaymentMethodPurchaseNumber.prototype.getContext = function () {
+
+								//add name to empty purchased by value.
+								var profile = ProfileModel.getInstance(),
+									is_loading = !Configuration.get('performance.waitForUserProfile', true) && ProfileModel.getPromise().state() !== 'resolved';
+
+								if (profile && !is_loading) {
+									var options = this.wizard.model.get("options");
+									if (!options || options.custbody_weborder_placed_by == "") {
+
+										var firstname = profile.get("firstname");
+										var lastname = profile.get("lastname");
+										options.custbody_weborder_placed_by = firstname || lastname;
+										if (firstname && lastname) {
+											options.custbody_weborder_placed_by += " " + lastname;
+										}
+
+									}
+								}
+								//include error
 								return {
 									//@property {String} purchaseNumber
 									purchaseNumber: this.wizard.model.get('purchasenumber'),
@@ -258,7 +309,7 @@ define(
 							}
 						}
 					}
-
+					console.log("Flexitog Extension Loaded");
 				} catch (err) {
 					console.log(err);
 				}
