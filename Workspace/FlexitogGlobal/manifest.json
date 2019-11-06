@@ -134,7 +134,8 @@
                     "Modules/AccordionCCT/JavaScript/code25.AccordionCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
                 ]
             },
             "myaccount": {
@@ -148,7 +149,8 @@
                     "Modules/AccordionCCT/JavaScript/code25.AccordionCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
                 ]
             },
             "checkout": {
@@ -162,7 +164,8 @@
                     "Modules/AccordionCCT/JavaScript/code25.AccordionCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
                 ]
             }
         }
