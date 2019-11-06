@@ -2,7 +2,7 @@
 Author : Gordon Truslove
 Date : 10/15/2019, 3:19:47 PM
 ----}}
-<a class="header-mini-cart-menu-cart-link {{#if showLines}}header-mini-cart-menu-cart-link-enabled{{/if}}" data-type="mini-cart" title="{{translate 'Cart'}}" data-touchpoint="{{cartTouchPoint}}" data-hashtag="#cart" href="#">
+<a id="header-cart-link" class="header-mini-cart-menu-cart-link {{#if showLines}}header-mini-cart-menu-cart-link-enabled{{/if}}" data-type="mini-cart" title="{{translate 'Cart'}}" data-touchpoint="{{cartTouchPoint}}" data-hashtag="#cart" href="#">
 	<i class="header-mini-cart-menu-cart-icon"></i>
 	<span class="header-mini-cart-menu-cart-legend">
 		{{#if isLoading}}

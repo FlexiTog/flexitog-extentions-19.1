@@ -10,6 +10,12 @@
 	}
 }
 
+#main-container{
+	
+		padding-top: $sc-margin-lv3;
+	
+}
+
 .checkout-layout-content, .checkout-layout-notifications{
 	@extend .container;
 }

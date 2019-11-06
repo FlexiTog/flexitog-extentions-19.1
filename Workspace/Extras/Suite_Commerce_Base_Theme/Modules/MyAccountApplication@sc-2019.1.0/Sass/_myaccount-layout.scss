@@ -28,6 +28,12 @@
 	}
 }
 
+#main-container{
+	@media (max-width: $screen-sm-max){
+		margin-top: $sc-margin-lv3;
+	}
+}
+
 .myaccount-layout-footer {
 	@extend %sc-footer !optional;
 }
