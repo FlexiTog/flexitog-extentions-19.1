@@ -8,7 +8,7 @@
 			<ul class="ft-header-subheader-options-left">
 
 				<li class="header-subheader-settings">
-					<a href="#" class="header-subheader-settings-link" data-toggle="dropdown"
+					<a id="header-contact-us" href="#" class="header-subheader-settings-link" data-toggle="dropdown"
 						title="{{translate 'Contact us'}}">
 						{{translate 'Contact us'}}
 						<i class="header-menu-contact-icon"></i>
@@ -46,7 +46,9 @@
 							<li><i class="header-menu-phone-icon"></i></li>
 							<li>
 								<h5>{{translate 'Prefer to Call?'}}</h5>
-								<p class="ft-phone-large">{{translate '+44 (0) 1692 400 300'}}</p>
+								<p class="ft-phone-large">{{translate '<small><b>International</b></small> +44 (0) 1692 400 300'}}</p>
+<p class="ft-phone-large">{{translate '<small><b>France</b></small> +33 (0) 1 84 88 03 00'}}</p>
+<p class="ft-phone-large">{{translate '<small><b>Italy</b></small>  +39 (0) 6 83 46 44 06'}}</p>
 							</li>
 						</ul>
 						<ul class="ft-bullet-list">
@@ -65,7 +67,7 @@
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00441692400300" class="header-subheader-settings-link">+44 (0) 1692 400 300 <i
+					<a href="tel:00441692400300" class="header-subheader-settings-link"><small><b>(GB)</b></small> 01692 400 300 <i
 							class="header-phone-icon"></i></a>
 				</li>
 
@@ -125,7 +127,7 @@
 
 				<div class="ft-header-menu-searchmobile" data-view="SiteSearch.Button"></div>
 				<span class="dropdown">
-					<a href="#" class="ft-header-quick-link" title="{{translate 'Quick Order'}}"
+					<a id="header-quick-link" href="#" class="ft-header-quick-link" title="{{translate 'Quick Order'}}"
 						data-toggle="dropdown"><i class="ft-header-quick-link-icon"></i></a>
 					<div id="quick-menu" class="ft-header-menu-quick-dropdown">
 						<h2 class="header-menu-settings-dropdown-title"><i class="ft-header-quick-link-icon"></i>

@@ -79,7 +79,7 @@ define(
 				Backbone.View.prototype.render.apply(this, arguments);
 				this.$('[data-type="header-sidebar-menu"]').sidebarMenu();
 			},
-			findCollections(parent, categories) {
+			findCollections:function(parent, categories) {
 				if(parent&&parent.collections){
 					return;
 				}

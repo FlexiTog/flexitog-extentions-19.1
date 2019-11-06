@@ -37,10 +37,28 @@ define(
 				'click [data-action="header-sidebar-hide"]': 'hideSidebar',
 				'click [data-type="header-sidebar-menu"]': 'hideSidebar',
 				'click .header-menu-level1-anchor': 'clickTopLevel',
-				'click .header-menu-level2-anchor': 'hideSidebar'
+				'click .header-menu-level2-anchor': 'hideSidebar',
+				'mouseenter #header-quick-link':'startHover',
+				'mousemove #header-quick-link':'startHover',
+				'mouseleave #header-quick-link':'stopHover',
+				'mouseenter #header-cart-link':'startHover',
+				'mousemove #header-cart-link':'startHover',
+				'mouseleave #header-cart-link':'stopHover'
 				
 			}
-
+,startHover:function(e){
+	var self=this;
+	if(this.hoverTimeout){
+	clearTimeout(this.hoverTimeout);
+	}
+	this.hoverTimeout=setTimeout(function(){self.isHover(e);},100)
+}
+,stopHover:function(){
+	clearTimeout(this.hoverTimeout);
+}
+,isHover:function(e){
+	e.target.click();
+}
 			,
 			initialize: function () {
 					Backbone.history.on('all', this.verifyShowSiteSearch, this);
