@@ -114,20 +114,20 @@ define(
 						});
 					}
 					//override the home page type.
-					if (SC.ENVIRONMENT.SCTouchpoint == "shopping") {
-						var pageType = container.getComponent('PageType');
+					// if (SC.ENVIRONMENT.SCTouchpoint == "shopping") {
+					// 	var pageType = container.getComponent('PageType');
 
-						pageType.registerPageType({
-							'name': 'home-page',
-							'routes': ['', '?*params'],
-							'view': HomeView,
-							'defaultTemplate': {
-								'name': 'home.tpl',
-								'displayName': 'Home Default',
-								'thumbnail': Utils.getAbsoluteUrl('img/default-layout-home.png')
-							}
-						});
-					}
+					// 	pageType.registerPageType({
+					// 		'name': 'home-page',
+					// 		'routes': ['', '?*params'],
+					// 		'view': HomeView,
+					// 		'defaultTemplate': {
+					// 			'name': 'home.tpl',
+					// 			'displayName': 'Home Default',
+					// 			'thumbnail': Utils.getAbsoluteUrl('img/default-layout-home.png')
+					// 		}
+					// 	});
+					// }
 
 					//Header Scroll
 					var lastScroll = 0,
@@ -237,8 +237,11 @@ define(
 									if (this.error) {
 										console.log("Checkout Error:", this.error);
 										var msg = this.error.errorMessage;
-										var code=this.error.errorCode;
-										if (code!="ERR_WS_UNHANDLED_ERROR"&&msg != "An error has occured") {
+										var code = this.error.errorCode;
+										if (code == "ERR_WS_UNHANDLED_ERROR" || msg == "An error has occurred") {
+											console.log("Error Message:", msg);
+											console.log("Error Code:", code);
+										} else {
 											var global_view_message = new GlobalViewsMessageView({
 												message: this.wizard.processErrorMessage(this.error.errorMessage),
 												type: 'error',
@@ -250,8 +253,6 @@ define(
 											jQuery('body').animate({
 												scrollTop: jQuery('body .global-views-message-error:first').offset().top
 											}, 600);
-										} else {
-											console.log("Error Message:", msg)
 										}
 										this.error = null;
 									}
@@ -309,6 +310,8 @@ define(
 							}
 						}
 					}
+					//IE BUG
+					
 					console.log("Flexitog Extension Loaded");
 				} catch (err) {
 					console.log(err);
