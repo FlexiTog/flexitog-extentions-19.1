@@ -29,7 +29,7 @@
 						<ul class="ft-bullet-list">
 							<li><i class="header-menu-info-icon"></i></li>
 							<li>
-								<h5>{{translate 'Support Tickets'}}</h5>
+								<h5><a href="/support" >{{translate 'Support Tickets'}}</a></h5>
 								<p>{{translate 'Report faulty goods, issues & tech support'}}</p>
 							</li>
 						</ul>
@@ -154,7 +154,7 @@
 						<a data-touchpoint="customercenter" data-hashtag="#wishlist" class="ft-quick-order-button">
 							<div class="ft-quick-order-button-main">
 								<h3>{{translate 'Your Saved Products'}} <i class="ft-header-list-icon"></i></h3>
-								<p>{{translate 'Create a list of items that you order on a regular basis an quickly add the entire list or part of a list to your cart.'}}
+								<p>{{translate 'Create a list of items that you order on a regular basis and quickly add the entire list or part of a list to your cart.'}}
 								</p>
 							</div>
 							<div class="ft-quick-order-button-arrows">»</div>

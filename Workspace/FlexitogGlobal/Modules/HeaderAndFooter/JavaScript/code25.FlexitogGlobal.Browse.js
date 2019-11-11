@@ -147,7 +147,7 @@ define('code25.FlexitogGlobal.Browse.View'
 				categoryUrl = categoryUrl[0] !== '/' ? '/' + categoryUrl : categoryUrl;
 				var caturl = url[0] !== '/' ? '/' + url : url;
 
-				return caturl.indexOf(categoryUrl) === 0;
+				return caturl&&caturl.indexOf(categoryUrl) === 0;
 			});
 
 			this.model = new FacetsModel();
