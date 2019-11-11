@@ -85,7 +85,7 @@ define(
 				}
 				for (var i = 0; i < categories.length; i++) {
 
-					if (categories[i].href.indexOf("/collections") > -1) {
+					if (categories[i].href&&categories[i].href.indexOf("/collections") > -1) {
 						categories[i].collection = true;
 						if (parent) {
 							parent.collections = parent.collections || [];
