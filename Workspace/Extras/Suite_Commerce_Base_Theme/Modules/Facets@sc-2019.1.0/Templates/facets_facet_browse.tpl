@@ -1,26 +1,10 @@
 <section class="facets-facet-browse">
-	<div data-cms-area="item_list_banner" data-cms-area-filters="page_type"></div>
-
+<div class="cms-landing-page-row-full-col">
+		<div data-cms-area="cms-global-area-1" data-cms-area-filters="global"></div>
+	</div>
 	{{#if showResults}}
 		<div class="facets-facet-browse-content">
-<!--
-			<div class="facets-facet-browse-facets" data-action="pushable" data-id="product-search-facets">
 
-				<div data-cms-area="facet_navigation_top" data-cms-area-filters="page_type"></div>
-
-				{{#if isCategory}}
-					<div data-view="Facets.CategorySidebar" class="facets-facet-browse-facets-sidebar"></div>
-				{{/if}}
-
-				<div data-view="Facets.FacetedNavigation" data-exclude-facets="commercecategoryname,category"></div>
-
-				<div data-cms-area="facet_navigation_bottom" data-cms-area-filters="page_type"></div>
-			</div>
--->
-			<!--
-			Sample of how to add a particular facet into the HTML. It is important to specify the data-facet-id="<facet id>"
-			properly <div data-view="Facets.FacetedNavigation.Item" data-facet-id="custitem1"></div>
-			 -->
 
 			<div class="facets-facet-browse-results" itemscope="" itemtype="https://schema.org/ItemList">
 
@@ -116,7 +100,9 @@
 		<div class="facets-facet-browse-empty-items" data-view="Facets.Items.Empty"></div>
 	{{/if}}
 
-	<div id="banner-section-bottom" class="content-banner banner-section-bottom facets-facet-browse-banner-section-bottom" data-cms-area="item_list_banner_bottom" data-cms-area-filters="page_type"></div>
+	<div class="cms-landing-page-row-full-col">
+		<div data-cms-area="cms-global-area-2" data-cms-area-filters="global"></div>
+	</div>
 </section>
 
 
