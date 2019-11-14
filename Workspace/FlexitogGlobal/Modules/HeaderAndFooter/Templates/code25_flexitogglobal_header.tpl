@@ -117,7 +117,7 @@
 			</div>
 
 			<a href="/" data-touchpoint="home"><img class="ft-header-logo"
-					src="{{getExtensionAssetsPath 'img/Logo.svg'}}" alt="Flexitog Logo"></a>
+					src="{{getExtensionAssetsPath 'img/FTLogo.svg'}}" alt="Flexitog Logo"></a>
 
 
 			<div class="header-right-menu">
