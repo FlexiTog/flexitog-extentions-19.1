@@ -1,6 +1,7 @@
 <div class="product-details-full">
-	<div data-cms-area="item_details_banner" data-cms-area-filters="page_type"></div>
-
+	<div class="cms-landing-page-row-full-col">
+		<div data-cms-area="cms-global-area-1" data-cms-area-filters="global"></div>
+	</div>
 	<header class="product-details-full-header">
 		<div id="banner-content-top" class="product-details-full-banner-top"></div>
 	</header>
@@ -109,6 +110,9 @@
 		</div>
 		<div id="banner-details-bottom" class="content-banner banner-details-bottom" data-cms-area="item_details_banner_bottom" data-cms-area-filters="page_type"></div>
 	</article>
+	<div class="cms-landing-page-row-full-col">
+		<div data-cms-area="cms-global-area-2" data-cms-area-filters="global"></div>
+	</div>
 </div>
 
 

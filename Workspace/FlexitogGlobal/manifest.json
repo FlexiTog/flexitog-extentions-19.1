@@ -40,7 +40,8 @@
                 "img/code25_bannercct_icon.svg",
                 "img/code25_accordioncct_icon.svg",
                 "img/code25_gridcct_icon.svg",
-                "img/FooterLogo2015.svg"
+                "img/FooterLogo2015.svg",
+                "img/FTLogo.svg"
             ]
         },
         "fonts": {
@@ -136,7 +137,8 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
                 ]
             },
             "myaccount": {
@@ -151,7 +153,8 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
                 ]
             },
             "checkout": {
@@ -166,10 +169,13 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
                 ]
             }
         }
     },
-    "local_folder": "Workspace\\FlexitogGlobal"
+
+    "local_folder": "Workspace/FlexitogGlobal"
+
 }

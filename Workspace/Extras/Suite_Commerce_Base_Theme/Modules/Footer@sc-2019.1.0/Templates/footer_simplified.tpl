@@ -1,10 +1,8 @@
 <div data-view="Global.BackToTop"></div>
 <div class="footer-simplified-content">
-	<div class="footer-simplified-content-nav"></div>
-	<div id="banner-footer" class="content-banner banner-footer" data-cms-area="simplified_footer_banner" data-cms-area-filters="global"></div>
-
-	<div class="footer-simplified-content-copyright">
-		{{translate '&copy; 2008-2015 Company Name'}}
+	<div class="footer-content">
+		<div><img class="ft-footer-logo" src="/webapp/extensions/code25/FlexitogGlobal/1.0.0/img/FooterLogo2015.svg" alt="Flexitog Icon"></div>
+		{{log this}}
 	</div>
 </div>
 

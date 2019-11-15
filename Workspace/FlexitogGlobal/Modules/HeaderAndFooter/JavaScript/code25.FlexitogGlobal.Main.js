@@ -1,9 +1,9 @@
 define(
 	'code25.FlexitogGlobal.Main', [
-		'SC.Configuration', 'Utils', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'GlobalViews.Message.View'
+		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'GlobalViews.Message.View'
 	],
 	function (
-		Configuration, Utils, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, GlobalViewsMessageView
+		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, GlobalViewsMessageView
 	) {
 		'use strict';
 
@@ -79,9 +79,11 @@ define(
 							return res;
 						})
 					});
+					
 
 					//show siblings when there are no sub categories
 					FacetsBrowseView.prototype.childViews['Facets.CategoryCells'] = function () {
+						console.log(this.translator.getCategoryUrl());
 						var catmodel = this.model.get('category');
 						var catllist = [];
 						if (catmodel) {
@@ -101,8 +103,6 @@ define(
 						});
 
 					}
-
-
 
 					//HomeView.prototype.title=_('FlexiTog | Thermal clothing for Cold stores, Freezers and Winter wear').translate();
 
@@ -229,7 +229,33 @@ define(
 							}
 						}
 					} else if (SC.ENVIRONMENT.SCTouchpoint == "checkout") {
+
+//filter the payment methods
+var CreditCardEditFormView=require('CreditCard.Edit.Form.View');
+_.extend(CreditCardEditFormView.prototype, {
+	getContext: _.wrap(CreditCardEditFormView.prototype.getContext, function (getContext, options) {
+		var res = getContext.apply(this, _.rest(arguments));
+		console.log(res);
+		//paymentMethods
+
+		var currency = SC.ENVIRONMENT && SC.ENVIRONMENT.currentCurrency && SC.ENVIRONMENT.currentCurrency.internalid;
+		var session_currency = SC.SESSION && SC.SESSION.currency && SC.SESSION.currency.internalid;
+
+		var currentCurrency = session_currency || currency;
+		var match="," + currentCurrency + ",";
+		console.log(match);
+		for (var i = res.paymentMethods.length - 1; i >= 0; i--) {
+			if (res.paymentMethods[i].key.indexOf(match)==-1) {
+				res.paymentMethods.splice(i,1);
+			}
+		}
+
+		return res;
+	})
+});
+
 						// Override some PO numbers to add validation.
+
 						var WizardStep = require("Wizard.Step");
 						if (WizardStep) {
 							WizardStep.prototype.showError = function () {
@@ -238,21 +264,29 @@ define(
 										console.log("Checkout Error:", this.error);
 										var msg = this.error.errorMessage;
 										var code = this.error.errorCode;
-										if (code == "ERR_WS_UNHANDLED_ERROR" || msg == "An error has occurred") {
-											console.log("Error Message:", msg);
-											console.log("Error Code:", code);
-										} else {
-											var global_view_message = new GlobalViewsMessageView({
-												message: this.wizard.processErrorMessage(this.error.errorMessage),
-												type: 'error',
-												closable: true
-											});
+										if (code == "ERR_WS_UNHANDLED_ERROR") {
+											if (msg && msg.indexOf("An error has occurred") > -1) {
+												console.log("Error Message:", msg);
+												console.log("Error Code:", code);
+											} else {
+												// var global_view_message = new GlobalViewsMessageView({
+												// 	message: this.wizard.processErrorMessage(this.error.errorMessage),
+												// 	type: 'error',
+												// 	closable: true
+												// });
 
-											this.$('[data-type="alert-placeholder-step"]').html(global_view_message.render().$el.html());
+												// this.$('[data-type="alert-placeholder-step"]').html(global_view_message.render().$el.html());
 
-											jQuery('body').animate({
-												scrollTop: jQuery('body .global-views-message-error:first').offset().top
-											}, 600);
+												// jQuery('body').animate({
+												// 	scrollTop: jQuery('body .global-views-message-error:first').offset().top
+												// }, 600);
+
+												if (msg.indexOf("rejected") > -1 || msg.indexOf("payment") > -1 || msg.indexOf("merchant") > -1 || msg.indexOf("processing") > -1) {
+													msg = "We were unable to process this payment.<br /><br /><ol><li>Check the payment and address details have been entered correctly.</li><li>Check the account has sufficient funds.</li><li>Try a different card.</li><li>Contact us for assistance.</li></ol>";
+												}
+												//purchase-order-number
+												Tools.showErrorInModal(container, _("Unable to Continue").translate(), msg);
+											}
 										}
 										this.error = null;
 									}
@@ -311,7 +345,7 @@ define(
 						}
 					}
 					//IE BUG
-					
+
 					console.log("Flexitog Extension Loaded");
 				} catch (err) {
 					console.log(err);
