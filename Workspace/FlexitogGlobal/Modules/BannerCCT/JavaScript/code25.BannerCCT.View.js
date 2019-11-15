@@ -23,7 +23,7 @@ define('code25.BannerCCT.View', [
 
 		},
 		getContext: function getContext() {
-			
+			// ben was here testing
 			var blank = ["<h1><br></h1>","<h2><br></h2>","<h3><br></h3>","<h4><br></h4>","<h5><br></h5>","<p><br></p>", "<a><br></a>","<p></p>", "<br>", ""];
 			var content = ["custrecord_c25_banner_topcontent", "custrecord_c25_banner_leftcontent", "custrecord_c25_banner_rightcontent", "custrecord_c25_banner_bottomcontent"];
 			var hasContent;
