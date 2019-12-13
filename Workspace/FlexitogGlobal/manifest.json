@@ -175,7 +175,5 @@
             }
         }
     },
-
-    "local_folder": "Workspace/FlexitogGlobal"
-
+    "local_folder": "Workspace\\FlexitogGlobal"
 }
