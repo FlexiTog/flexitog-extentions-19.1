@@ -1,4 +1,4 @@
-<div class="global-views-message {{type}} alert" role="alert">
+<div class="global-views-message {{type}} alert" data-message="{{simplify message}}" role="alert">
 	<div>
 		{{#if showStringMessage}}
 			{{#if showMultipleMessage}}

@@ -1649,3 +1649,7 @@ body {
 		}
 	}
 }
+
+div[data-message="An internal error has occurred"] {
+	display: none !important;
+}

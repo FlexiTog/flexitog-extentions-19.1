@@ -1,9 +1,9 @@
 define(
 	'code25.FlexitogGlobal.Main', [
-		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'GlobalViews.Message.View'
+		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'Handlebars'
 	],
 	function (
-		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, GlobalViewsMessageView
+		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, Handlebars
 	) {
 		'use strict';
 
@@ -57,6 +57,21 @@ define(
 						}
 					}
 
+					//handlebars to create simplified text
+					Handlebars.registerHelper('simplify', function (text) {
+						var text = text || "",
+							char, body = "";
+						for (var i = 0; i < text.length; i++) {
+							char = text.charAt(i);
+							if (char.toLowerCase() != char.toUpperCase()) {
+								body += char;
+							} else {
+								body += " ";
+							}
+						}
+						return body;
+					})
+
 
 					/** @type {LayoutComponent} */
 					var layout = container.getComponent('Layout');
@@ -79,7 +94,7 @@ define(
 							return res;
 						})
 					});
-					
+
 
 					//show siblings when there are no sub categories
 					FacetsBrowseView.prototype.childViews['Facets.CategoryCells'] = function () {
@@ -230,29 +245,30 @@ define(
 						}
 					} else if (SC.ENVIRONMENT.SCTouchpoint == "checkout") {
 
-//filter the payment methods
-var CreditCardEditFormView=require('CreditCard.Edit.Form.View');
-_.extend(CreditCardEditFormView.prototype, {
-	getContext: _.wrap(CreditCardEditFormView.prototype.getContext, function (getContext, options) {
-		var res = getContext.apply(this, _.rest(arguments));
-		console.log(res);
-		//paymentMethods
+						//filter the payment methods
+						// var CreditCardEditFormView=require('CreditCard.Edit.Form.View');
+						// _.extend(CreditCardEditFormView.prototype, {
+						// 	getContext: _.wrap(CreditCardEditFormView.prototype.getContext, function (getContext, options) {
+						// 		var res = getContext.apply(this, _.rest(arguments));
+						// 		// console.log("credit card context!",res);
+						// 		// console.log("paymentMethods",JSON.stringify(res.paymentMethods));
+						// 		//paymentMethods
 
-		var currency = SC.ENVIRONMENT && SC.ENVIRONMENT.currentCurrency && SC.ENVIRONMENT.currentCurrency.internalid;
-		var session_currency = SC.SESSION && SC.SESSION.currency && SC.SESSION.currency.internalid;
+						// 		var currency = SC.ENVIRONMENT && SC.ENVIRONMENT.currentCurrency && SC.ENVIRONMENT.currentCurrency.internalid;
+						// 		var session_currency = SC.SESSION && SC.SESSION.currency && SC.SESSION.currency.internalid;
 
-		var currentCurrency = session_currency || currency;
-		var match="," + currentCurrency + ",";
-		console.log(match);
-		for (var i = res.paymentMethods.length - 1; i >= 0; i--) {
-			if (res.paymentMethods[i].key.indexOf(match)==-1) {
-				res.paymentMethods.splice(i,1);
-			}
-		}
+						// 		var currentCurrency = session_currency || currency;
+						// 		var match="," + currentCurrency + ",";
+						// 		//console.log(match);
+						// 		for (var i = res.paymentMethods.length - 1; i >= 0; i--) {
+						// 			if (res.paymentMethods[i].key.indexOf(match)==-1) {
+						// 				res.paymentMethods.splice(i,1);
+						// 			}
+						// 		}
 
-		return res;
-	})
-});
+						// 		return res;
+						// 	})
+						// });
 
 						// Override some PO numbers to add validation.
 
