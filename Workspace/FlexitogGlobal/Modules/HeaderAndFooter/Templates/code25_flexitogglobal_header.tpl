@@ -29,8 +29,8 @@
 						<ul class="ft-bullet-list">
 							<li><i class="header-menu-info-icon"></i></li>
 							<li>
-								<h5><a href="/support" >{{translate 'Support Tickets'}}</a></h5>
-								<p>{{translate 'Report faulty goods, issues & technical support'}}</p>
+								<h5><a href="/support-tickets" >{{translate 'Support Tickets'}}</a></h5>
+								<p>{{translate 'Report faulty goods, issues & tech support'}}</p>
 							</li>
 						</ul>
 						<ul class="ft-bullet-list">
