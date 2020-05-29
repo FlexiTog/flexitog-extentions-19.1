@@ -38,7 +38,7 @@
 							<li>
 								<h5>{{translate 'Email'}}</h5>
 								<p>{{translate 'Email sales orders or general enquires for a prompt quick reply from our customer services team.'}}<br />
-								<a href="mailto:sales@flexitog.com">sales@flexitog.com</a>
+								<a href="{{translate 'mailto:sales@flexitog.com'}}">{{translate 'sales@flexitog.com'}}</a>
 								</p>
 							</li>
 						</ul>
@@ -61,13 +61,13 @@
 									Neatishead<br />
 									Norfolk<br />
 									NR12 8BU<br />
-									England</p>
+									{{translate 'England'}}</p>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00441692400300" class="header-subheader-settings-link"><small><b>(GB)</b></small> 01692 400 300 <i
+					<a href="{{translate 'tel:00441692400300'}}" class="header-subheader-settings-link"><small><b>{{translate '(GB)'}}</b></small> {{translate '01692 400 300'}} <i
 							class="header-phone-icon"></i></a>
 				</li>
 

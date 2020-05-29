@@ -40,7 +40,7 @@ Date : 10/18/2019, 10:51:37 AM
 
 	
 	<div><img class="ft-footer-logo" src="{{getExtensionAssetsPath 'img/FooterLogo2015.svg'}}" alt="Flexitog Icon"></div>
-                    <a href="/privacy">Privacy Policy</a> <span class="ft-footer-link-break">|</span> <a href="/termsandconditions">Terms &amp; Conditions</a> <span class="ft-footer-link-break">|</span> <a href="/cookiepolicy">Cookie Policy</a>
+                    <a href="{{translate '/privacy'}}">{{translate 'Privacy Policy'}}</a> <span class="ft-footer-link-break">|</span> <a href="{{translate '/termsandconditions'}}">Terms &amp; Conditions</a> <span class="ft-footer-link-break">|</span> <a href="{{translate '/cookiepolicy'}}">{{translate 'Cookie Policy'}}</a>
 </div>
 
 
