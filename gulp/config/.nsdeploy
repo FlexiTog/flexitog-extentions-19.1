@@ -1,15 +1,12 @@
 {
     "credentials": {
+        "is_scis": false,
         "user_agent": "sc-extension-devtools/2019.1.1",
-        "email": "gordon@code25.com",
+        "email": "ben.thrower@flexitog.com",
         "account": "1294017",
         "role": 1068,
         "hostname": "1294017.restlets.api.netsuite.com",
-        "website": "2",
-        "domain": "testing.flexitog.com",
-        "webapp_id": "4709826",
-        "target_folder": "4709826",
-        "is_scis": false,
+        "website": "4",
         "roleId": 1068
     }
 }
