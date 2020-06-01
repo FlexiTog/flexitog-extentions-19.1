@@ -37,15 +37,15 @@
 							<li><i class="header-menu-envelope-icon"></i></li>
 							<li>
 								<h5>{{translate 'Email'}}</h5>
-								<p>{{translate 'Email sales orders or general enquires for a promt quick reply from our customer services team.'}}<br />
-								<a href="mailto:sales@flexitog.com">Sales@FlexiTog.com</a>
+								<p>{{translate 'Email sales orders or general enquires for a prompt quick reply from our customer services team.'}}<br />
+								<a href="mailto:{{translate 'Sales@FlexiTog.com'}}">{{translate 'Sales@FlexiTog.com'}}</a>
 								</p>
 							</li>
 						</ul>
 						<ul class="ft-bullet-list">
 							<li><i class="header-menu-phone-icon"></i></li>
 							<li>
-								<h5>{{translate 'Prefer to Call?'}}</h5>
+								<h5>{{translate 'Prefer to call?'}}</h5>
 								<p class="ft-phone-large">{{translate '<small><b>International</b></small> +44 (0) 1692 400 300'}}</p>
 <p class="ft-phone-large">{{translate '<small><b>France</b></small> +33 (0) 1 84 88 03 00'}}</p>
 <p class="ft-phone-large">{{translate '<small><b>Italy</b></small>  +39 (0) 6 83 46 44 06'}}</p>
@@ -55,19 +55,19 @@
 							<li><i class="header-menu-map-icon"></i></li>
 							<li>
 								<h5>{{translate 'Address'}}</h5>
-								<p>Flexitog<br />
+								<p>FlexiTog<br />
 									The Granary Business Park<br />
 									School Road<br />
 									Norwich<br />
 									Norfolk<br />
 									NR12 8BU<br />
-									England</p>
+									{{translate 'England'}}</p>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00441692400300" class="header-subheader-settings-link"><small><b>(GB)</b></small> 01692 400 300 <i
+					<a href="tel:{{translate '00441692400300'}}" class="header-subheader-settings-link"><small><b>{{translate '(GB)'}}</b></small> {{translate '01692 400 300'}} <i
 							class="header-phone-icon"></i></a>
 				</li>
 
@@ -106,7 +106,7 @@
 			<button class="header-sidebar-toggle" data-action="header-sidebar-show">
 				<i class="header-sidebar-toggle-icon"></i>
 			</button>
-			<a class="ft-header-phone-button-link" href="tel:00441692400300">
+			<a class="ft-header-phone-button-link" href="tel:{{translate '00441692400300'}}">
 				<i class="header-phone-icon"></i>
 			</a>
 		</div>
@@ -117,7 +117,7 @@
 			</div>
 
 			<a href="/" data-touchpoint="home"><img class="ft-header-logo"
-					src="{{getExtensionAssetsPath 'img/FTLogo.svg'}}" alt="Flexitog Logo"></a>
+					src="{{getExtensionAssetsPath 'img/FTLogo.svg'}}" alt="FlexiTog Logo"></a>
 
 
 			<div class="header-right-menu">
