@@ -58,7 +58,7 @@
 								<p>FlexiTog<br />
 									The Granary Business Park<br />
 									School Road<br />
-									Norwich<br />
+									Neatishead<br />
 									Norfolk<br />
 									NR12 8BU<br />
 									{{translate 'England'}}</p>
