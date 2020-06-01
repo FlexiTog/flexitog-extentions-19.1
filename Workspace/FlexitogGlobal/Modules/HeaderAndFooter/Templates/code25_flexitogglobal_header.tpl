@@ -38,7 +38,7 @@
 							<li>
 								<h5>{{translate 'Email'}}</h5>
 								<p>{{translate 'Email sales orders or general enquires for a prompt quick reply from our customer services team.'}}<br />
-								<a href="mailto:sales@flexitog.com">sales@flexitog.com</a>
+								<a href="mailto:{{translate 'Sales@FlexiTog.com'}}">{{translate 'Sales@FlexiTog.com'}}</a>
 								</p>
 							</li>
 						</ul>
@@ -61,13 +61,13 @@
 									Neatishead<br />
 									Norfolk<br />
 									NR12 8BU<br />
-									England</p>
+									{{translate 'England'}}</p>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="header-subheader-settings">
-					<a href="tel:00441692400300" class="header-subheader-settings-link"><small><b>(GB)</b></small> 01692 400 300 <i
+					<a href="tel:{{translate '00441692400300'}}" class="header-subheader-settings-link"><small><b>{{translate '(GB)'}}</b></small> {{translate '01692 400 300'}} <i
 							class="header-phone-icon"></i></a>
 				</li>
 
@@ -106,7 +106,7 @@
 			<button class="header-sidebar-toggle" data-action="header-sidebar-show">
 				<i class="header-sidebar-toggle-icon"></i>
 			</button>
-			<a class="ft-header-phone-button-link" href="tel:00441692400300">
+			<a class="ft-header-phone-button-link" href="tel:{{translate '00441692400300'}}">
 				<i class="header-phone-icon"></i>
 			</a>
 		</div>
@@ -117,7 +117,7 @@
 			</div>
 
 			<a href="/" data-touchpoint="home"><img class="ft-header-logo"
-					src="{{getExtensionAssetsPath 'img/FTLogo.svg'}}" alt="Flexitog Logo"></a>
+					src="{{getExtensionAssetsPath 'img/FTLogo.svg'}}" alt="FlexiTog Logo"></a>
 
 
 			<div class="header-right-menu">

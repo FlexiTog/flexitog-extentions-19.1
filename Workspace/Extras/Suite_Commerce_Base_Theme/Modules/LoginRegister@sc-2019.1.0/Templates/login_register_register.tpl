@@ -39,8 +39,19 @@
 				<input type="text" name="company" id="register-company" class="login-register-register-form-input"/>
 			</div>
 		</div>
-	{{/if}}
+	
 
+	<div class="login-register-register-form-controls-group" data-validation="control-group">
+			<label class="login-register-register-form-label" for="custentity_c25_vatnumber">
+				
+					{{translate 'VAT Number'}} <small class="login-register-register-form-optional">{{translate '(optional)'}}</small>
+				
+			</label>
+			<div class="login-register-register-form-controls" data-validation="control">
+				<input type="text" name="custentity_c25_vatnumber" id="custentity_c25_vatnumber" class="login-register-register-form-input"/>
+			</div>
+		</div>
+{{/if}}
 	<div class="login-register-register-form-controls-group" data-validation="control-group">
 		<label class="login-register-register-form-label" for="register-email">
 			{{translate 'Email Address <small class="login-register-register-form-required">*</small>'}}
