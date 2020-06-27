@@ -1653,3 +1653,66 @@ body {
 div[data-message="An internal error has occurred"] {
 	display: none !important;
 }
+
+#custcol_c25_whoisthisfor-container,
+#in-modal-custcol_c25_whoisthisfor-container,
+#transaction-line-views-selected-option {
+	adisplay: none;
+}
+.bxslider{
+	margin:0!important;
+}
+.suggestion-list {
+	border: 1px solid $sc-color-theme-border;
+	box-shadow: 0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175);
+	width: 300px;
+	
+	max-height: 150px;
+	overflow-y: auto;
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+	margin:-$sc-margin-lv2 0 0 0!important;
+
+	a {
+		background-color: white;
+		color: $sc-color-copy;
+		padding-top: $sc-padding-lv1;
+		padding-bottom: $sc-padding-lv1;
+		height: inherit;
+		line-height: inherit;
+		text-transform: inherit;
+		border-bottom: 1px solid $sc-color-theme-border-light;
+	}
+
+	a:hover {
+		background-color: $sc-color-theme-border-light;
+		color: $sc-color-copy-dark;
+	}
+
+	a:active {
+		background-color: $sc-color-theme-border-light;
+		color: $sc-color-copy-dark;
+	}
+}
+
+.suggestion-help {
+	@extend .header-menu-settings-dropdown;
+	border: 1px solid $sc-color-theme-border;
+	box-shadow: 0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175);
+	max-width: 100%;
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+	padding: $sc-padding-lv3 $sc-padding-lv3 $sc-padding-lv1 $sc-padding-lv3;
+	max-height: 150px;
+	overflow-y: auto;
+	width: 400px;
+	left: $sc-padding-lv3;
+	right: auto;
+}
+
+.quick-add-float {
+	float: left;
+	margin-right: $sc-margin-lv3;
+}
