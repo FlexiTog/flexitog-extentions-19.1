@@ -51,8 +51,8 @@ define(['N/record', 'N/search', 'N/runtime'],
                 });
                 log.debug("entity", entity);
                 if (entity) {
-
-                    var custcol_c25_whoisthisfor, custcol_c25_whoisthisfor_line, custentity_c25_whoisthisfor_suggestions, lookupFields, suggestions, lvalue, found,newSuggestion=false;
+                    
+                    var custcol_c25_whoisthisfor, custcol_c25_whoisthisfor_old, custentity_c25_whoisthisfor_suggestions, lookupFields, suggestions, lvalue, found,newSuggestion=false;
                     for (var i = 0; i < numLines; i++) {
 
                         var custcol_c25_whoisthisfor = currentRecord.getSublistValue({
@@ -60,20 +60,24 @@ define(['N/record', 'N/search', 'N/runtime'],
                             fieldId: 'custcol_c25_whoisthisfor',
                             line: i
                         });
-                        var custcol_c25_whoisthisfor_line = currentRecord.getSublistValue({
-                            sublistId: 'item',
-                            fieldId: 'custcol_c25_whoisthisfor_line',
-                            line: i
-                        });
-                        log.debug("who", custcol_c25_whoisthisfor + " = " + custcol_c25_whoisthisfor_line);
-                        if (custcol_c25_whoisthisfor != custcol_c25_whoisthisfor_line) {
+                        var custcol_c25_whoisthisfor_old = "";
+                        var oldRecord = scriptContext.oldRecord;
+                        if(oldRecord){
+                            custcol_c25_whoisthisfor_old = oldRecord.getSublistValue({
+                                sublistId: 'item',
+                                fieldId: 'custcol_c25_whoisthisfor',
+                                line: i
+                            });
+                        }
+                        //log.debug("who", custcol_c25_whoisthisfor + " = " + custcol_c25_whoisthisfor_old);
+                        if (custcol_c25_whoisthisfor != custcol_c25_whoisthisfor_old) {
                             if (!suggestions) {
                                 lookupFields = search.lookupFields({
                                     type: search.Type.CUSTOMER,
                                     id: entity,
                                     columns: ['custentity_c25_whoisthisfor_suggestions']
                                 });
-                                log.debug("lookupFields", JSON.stringify(lookupFields));
+                               // log.debug("lookupFields", JSON.stringify(lookupFields));
                                 custentity_c25_whoisthisfor_suggestions = lookupFields.custentity_c25_whoisthisfor_suggestions || "";
 
                                 suggestions = custentity_c25_whoisthisfor_suggestions.split(",");
@@ -81,7 +85,7 @@ define(['N/record', 'N/search', 'N/runtime'],
                             lvalue = custcol_c25_whoisthisfor.toLowerCase();
                             found = false;
                             for (var j = 0; j < suggestions.length; j++) {
-                                if (lvalue == suggestions[j]) {
+                                if (lvalue == suggestions[j].toLowerCase()) {
                                     found = true;
                                 }
                             }
