@@ -97,7 +97,7 @@ Date : 10/23/2019, 4:12:27 PM
 					<li>
 						{{#if hasNoItem}}
 						<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter"
-							data-hashtag="#quotes/new" name="requestaquotes">
+							data-hashtag="#request-a-quote" name="requestaquotes">
 							{{translate 'Request a Quote'}}
 						</a>
 						{{else}}
