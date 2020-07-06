@@ -69,7 +69,7 @@
 					{{#if hasProductList}}
 						<li>
 							{{#if hasNoItem}}
-								<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter" data-hashtag="#quotes/new" name="requestaquotes">
+								<a class="header-menu-myaccount-anchor-level4" href="#" data-touchpoint="customercenter" data-hashtag="#request-a-quote" name="requestaquotes">
 									{{translate 'Request a Quote'}}
 								</a>
 							{{else}}
