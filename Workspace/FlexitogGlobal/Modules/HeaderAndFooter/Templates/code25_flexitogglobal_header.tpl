@@ -160,7 +160,7 @@
 							<div class="ft-quick-order-button-arrows">»</div>
 						</a>
 
-						<a data-touchpoint="customercenter" data-hashtag="#quotes" class="ft-quick-order-button">
+						<a data-touchpoint="customercenter" data-hashtag="#request-a-quote" class="ft-quick-order-button">
 							<div class="ft-quick-order-button-main">
 								<h3>{{translate 'Request a Quote'}} <i class="ft-header-edit-icon"></i></h3>
 								

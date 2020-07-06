@@ -1,20 +1,23 @@
+
 define(
 	'code25.FlexitogGlobal.Main', [
-		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'Handlebars'
+		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'Handlebars', 'code25.FlexitogGlobal.WhoIsThisFor'
 	],
 	function (
-		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, Handlebars
+		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, Handlebars, code25FlexitogGlobalWhoIsThisFor
 	) {
 		'use strict';
-
+		
 		return {
 			mountToApp: function mountToApp(container) {
+				
 				// using the 'Layout' component we add a new child view inside the 'Header' existing view 
 				// (there will be a DOM element with the HTML attribute data-view="Header.Logo")
 				// more documentation of the Extensibility API in
 				// https://system.netsuite.com/help/helpcenter/en_US/APIs/SuiteCommerce/Extensibility/Frontend/index.html
 
 				try {
+					
 					var CMS = container.getComponent('CMS');
 					//Custom content types
 					CMS.registerCustomContentType({
@@ -98,7 +101,7 @@ define(
 
 					//show siblings when there are no sub categories
 					FacetsBrowseView.prototype.childViews['Facets.CategoryCells'] = function () {
-						console.log(this.translator.getCategoryUrl());
+						//console.log(this.translator.getCategoryUrl());
 						var catmodel = this.model.get('category');
 						var catllist = [];
 						if (catmodel) {
@@ -224,11 +227,9 @@ define(
 					//These changes are not global, just shopping or checkout etc.
 					//Set the home description. This is an optional module!
 					if (SC.ENVIRONMENT.SCTouchpoint == "shopping") {
+
 						if (require) {
-							// var HomeView = require("Home.View");
-							// if (HomeView) {
-							// 	HomeView.prototype.metaDescription = _("UK & Europe’s leading brand for protective coldstore clothing in low & sub-zero tempuratures. Keeping people warm and comfortable since 1976.").translate();
-							// }
+
 							var CookieWarningBannerView = require("CookieWarningBanner.View");
 							if (CookieWarningBannerView) {
 								//Add cookie to new header
@@ -242,6 +243,7 @@ define(
 									}
 								});
 							}
+						code25FlexitogGlobalWhoIsThisFor.mount(container);
 						}
 					} else if (SC.ENVIRONMENT.SCTouchpoint == "checkout") {
 

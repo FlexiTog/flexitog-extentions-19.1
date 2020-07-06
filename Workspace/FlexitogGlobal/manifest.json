@@ -68,7 +68,9 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_countdown.tpl",
                     "Modules/GridCCT/Templates/code25_gridcct.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
                 ]
             },
             "myaccount": {
@@ -85,7 +87,9 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_countdown.tpl",
                     "Modules/GridCCT/Templates/code25_gridcct.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
                 ]
             },
             "checkout": {
@@ -102,7 +106,9 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_countdown.tpl",
                     "Modules/GridCCT/Templates/code25_gridcct.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
                 ]
             }
         }
@@ -136,8 +142,9 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
-                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
                 ]
             },
             "myaccount": {
@@ -152,8 +159,9 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
-                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
                 ]
             },
             "checkout": {
@@ -168,8 +176,9 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Countdown.js",
                     "Modules/GridCCT/JavaScript/code25.GridCCT.View.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js.js",
-                    "Modules/HeaderAndFooter/JavaScript/Tools.js"
+                    "Modules/HeaderAndFooter/JavaScript/Tools.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
                 ]
             }
         }
