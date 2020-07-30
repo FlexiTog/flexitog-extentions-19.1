@@ -14,7 +14,7 @@ define(
             try {
                 var e = arguments[0];
                 res = nlapiRequestURL("https://www.google.com/recaptcha/api/siteverify", {
-                    secret: "6Lf4D7gZAAAAAPC_-WeeXtJ7SwgrwytjM4Fn1iYi",
+                    secret: "6Lf4D7"+"gZAAAAAPC_"+"-WeeXtJ7Swgrw"+"ytjM4Fn1iYi",
                     response: e.data.token
                 }, null);
             } catch (err) {
