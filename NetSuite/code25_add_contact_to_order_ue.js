@@ -49,7 +49,7 @@ define(['N/record', 'N/search', 'N/runtime'],
                 var entity = currentRecord.getValue({
                     fieldId: 'entity'
                 });
-                log.debug("entity", entity);
+                
                 if (entity) {
 
                     var custcol_c25_whoisthisfor, custcol_c25_whoisthisfor_old, custentity_c25_whoisthisfor_suggestions, lookupFields, suggestions, lvalue, found, newSuggestion = false;
@@ -60,16 +60,13 @@ define(['N/record', 'N/search', 'N/runtime'],
                             fieldId: 'custcol_c25_whoisthisfor',
                             line: i
                         });
-                        var custcol_c25_whoisthisfor_old = "";
-                        var oldRecord = scriptContext.oldRecord;
-                        if (oldRecord) {
-                            custcol_c25_whoisthisfor_old = oldRecord.getSublistValue({
+                        var custcol_c25_whoisthisfor_old = currentRecord.getSublistValue({
                                 sublistId: 'item',
-                                fieldId: 'custcol_c25_whoisthisfor',
+                                fieldId: 'custcol_c25_whoisthisfor_line',
                                 line: i
                             });
-                        }
                         
+                        //log.debug("custcol_c25_whoisthisfor", custcol_c25_whoisthisfor+" "+custcol_c25_whoisthisfor_old);
                         if (custcol_c25_whoisthisfor != custcol_c25_whoisthisfor_old) {
                             if (!suggestions) {
                                 lookupFields = search.lookupFields({

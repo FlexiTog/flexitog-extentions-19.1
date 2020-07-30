@@ -1,10 +1,10 @@
 
 define(
 	'code25.FlexitogGlobal.Main', [
-		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'Handlebars', 'code25.FlexitogGlobal.WhoIsThisFor'
+		'SC.Configuration', 'Utils', 'Tools', 'jQuery', 'code25.FlexitogGlobal.Header.View', 'Header.Profile.View', 'Footer.View', 'Header.MiniCart.View', 'code25_flexitogglobal_header_profile.tpl', 'code25_flexitogglobal_footer.tpl', 'code25_flexitogglobal_mini_cart.tpl', 'code25.BannerCCT.View', 'code25.AccordionCCT.View', 'code25.GridCCT.View', 'code25.FlexitogGlobal.Countdown.View', 'Facets.FacetedNavigationItem.View', 'code25_flexitogglobal_navitem.tpl', 'Facets.CategoryCell.View', 'code25_flexitogglobal_categorycell.tpl', 'Facets.Browse.View', 'Backbone.CollectionView', 'require', 'code25.FlexitogGlobal.Home.View', 'Profile.Model', 'Handlebars', 'code25.FlexitogGlobal.WhoIsThisFor', 'code25.FlexitogGlobal.Register'
 	],
 	function (
-		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, Handlebars, code25FlexitogGlobalWhoIsThisFor
+		Configuration, Utils, Tools, jQuery, HeaderView, HeaderProfileView, FooterView, HeaderMiniCartView, code25_flexitogglobal_header_profile_tpl, code25_flexitogglobal_footer_tpl, code25_flexitogglobal_mini_cart_tpl, code25BannerCCTView, code25AccordionCCTView, code25GridCCTView, CountdownView, FacetedNavigationItemView, code25_flexitogglobal_navitem_tpl, FacetsCategoryCellView, code25_flexitogglobal_categorycell_tpl, FacetsBrowseView, BackboneCollectionView, require, HomeView, ProfileModel, Handlebars, code25FlexitogGlobalWhoIsThisFor,code25FlexitogGlobalRegister
 	) {
 		'use strict';
 		
@@ -361,6 +361,8 @@ define(
 								};
 							}
 						}
+
+						code25FlexitogGlobalRegister.mount(container);
 					}
 					//IE BUG
 

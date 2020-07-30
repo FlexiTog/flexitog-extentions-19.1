@@ -70,7 +70,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_register.tpl"
                 ]
             },
             "myaccount": {
@@ -89,7 +90,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_register.tpl"
                 ]
             },
             "checkout": {
@@ -108,7 +110,8 @@
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_navitem.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_categorycell.tpl",
                     "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_option.tpl",
-                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl"
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_quickadd.tpl",
+                    "Modules/HeaderAndFooter/Templates/code25_flexitogglobal_register.tpl"
                 ]
             }
         }
@@ -144,7 +147,8 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
                     "Modules/HeaderAndFooter/JavaScript/Tools.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Register.js"
                 ]
             },
             "myaccount": {
@@ -161,7 +165,8 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
                     "Modules/HeaderAndFooter/JavaScript/Tools.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Register.js"
                 ]
             },
             "checkout": {
@@ -178,9 +183,17 @@
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Browse.js",
                     "Modules/HeaderAndFooter/JavaScript/Tools.js",
                     "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.WhoIsThisFor.js",
-                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js"
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Home.js",
+                    "Modules/HeaderAndFooter/JavaScript/code25.FlexitogGlobal.Register.js"
                 ]
             }
         }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/HeaderAndFooter/SuiteScript/code25.FlexitogGlobal.Register.js",
+        "files": [
+            "Modules/HeaderAndFooter/SuiteScript/code25.FlexitogGlobal.Register.js",
+            "Modules/HeaderAndFooter/SuiteScript/code25.FlexitogGlobal.Register.js"
+        ]
     }
 }
