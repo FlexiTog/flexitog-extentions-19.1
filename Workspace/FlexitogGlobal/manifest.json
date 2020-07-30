@@ -2,7 +2,10 @@
     "name": "FlexitogGlobal",
     "fantasyName": "Flexitog Global",
     "vendor": "code25",
+    "version": "1.0.0",
     "type": "extension",
+    "target": "SCA,SCS",
+    "description": "Global extension, e.g. header and footer.",
     "cct": [
         {
             "icon": "img/code25_bannercct_icon.svg",
@@ -26,9 +29,7 @@
             "description": "Grid for SMT."
         }
     ],
-    "target": "SCA,SCS",
-    "version": "1.0.0",
-    "description": "Global extension, e.g. header and footer.",
+    "skins": [],
     "assets": {
         "img": {
             "files": [
@@ -50,6 +51,16 @@
     "configuration": {
         "files": [
             "Modules/HeaderAndFooter/Configuration/Countdown.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
+            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
+        },
+        "files": [
+            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
         ]
     },
     "templates": {
@@ -115,16 +126,6 @@
                 ]
             }
         }
-    },
-    "sass": {
-        "entry_points": {
-            "shopping": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "myaccount": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss",
-            "checkout": "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
-        },
-        "files": [
-            "Modules/HeaderAndFooter/Sass/_flexitogglobal.scss"
-        ]
     },
     "javascript": {
         "entry_points": {
@@ -195,5 +196,6 @@
             "Modules/HeaderAndFooter/SuiteScript/code25.FlexitogGlobal.Register.js",
             "Modules/HeaderAndFooter/SuiteScript/code25.FlexitogGlobal.Register.js"
         ]
-    }
+    },
+    "local_folder": "Workspace/FlexitogGlobal"
 }
